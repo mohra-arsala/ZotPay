@@ -1,10 +1,10 @@
 import './App.css';
-import Dashboard from '../src/Pages/Dashboard';
+import Notification from '../src/Pages/Notification';
 
 function App() {
   return (
     <div className="App">
-      <Dashboard></Dashboard>
+      <Notification></Notification>
     </div>
   );
 }
