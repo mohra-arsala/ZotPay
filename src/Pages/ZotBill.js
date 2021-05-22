@@ -2,12 +2,18 @@ import { Component } from 'react';
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
-const ZotBill = () => {
-  return (
-    <div>
-      <Button>Button1</Button>
-    </div>
-  );
-};
+export default class ZotBill extends Component {
+  constructor() {
+    super();
+  }
 
-export default ZotBill;
+  render() {
+    return (
+      <div>
+        <Button></Button>
+      </div>
+    );
+  }
+}
+
+// export default ZotBill;
