@@ -5,20 +5,19 @@ import ZotBill from '../src/Pages/ZotBill';
 import ParkingHourly from '../src/Pages/ParkingHourly';
 import ParkingPermit from '../src/Pages/ParkingPermit';
 import ParkingTabs from '../src/Pages/ParkingTabs';
+import {createMuiTheme, ThemeProvider, responsiveFontSizes} from '@material-ui/core/styles';
 
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
-
-const theme = createMuiTheme ({
-  palette: {
-    primary: {
-      main: '#0064a4'
+let theme = createMuiTheme({
+  palette:{
+    primary:{
+      main: '#27649f',
     },
-    secondary: {
-      main: '#ffd200'
-    }
+    secondary:{
+      main: '#f9d247',
+    },
   }
-});
-
+})
+theme = responsiveFontSizes(theme)
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -26,6 +25,7 @@ function App() {
         {/* <Notification></Notification> */}
         {/* <ParkingHourly></ParkingHourly> */}
         {/* <ParkingPermit></ParkingPermit> */}
+        {/* <Dashboard></Dashboard> */}
         {/* <ZotBill></ZotBill> */}
         <ParkingTabs></ParkingTabs>
       </div>
