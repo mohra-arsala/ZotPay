@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Bar() {
+export default function  ActivityBar() {
   const classes = useStyles();
 
   return (
@@ -40,10 +41,10 @@ export default function Bar() {
       <AppBar position="static" className={classes.bar}>
         <Toolbar>
           <IconButton onClick={() => {}}>
-          <NotificationsIcon className={classes.icon}/>
+          <ArrowBackIosIcon className={classes.icon}/>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            ZotPay
+            Activity Record
           </Typography>
         </Toolbar>
       </AppBar>
