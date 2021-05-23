@@ -2,6 +2,7 @@ import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+<<<<<<< HEAD
 import Box from '@material-ui/core/Box';
 import QuarterDropDownMenu from '../Components/QuarterDropDownMenu';
 import AmountInput from '../Components/AmountInput';
@@ -155,3 +156,5 @@ const ZotBill = () => {
 };
 
 export default ZotBill;
+=======
+>>>>>>> b49aab62bc42813380acae5c483140b0f5d51e76

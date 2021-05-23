@@ -11,8 +11,12 @@
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+<<<<<<< HEAD
     "react-easy-swipe": "0.0.21",
     "react-modal": "^3.13.1",
+=======
+    "react-router-dom": "^5.2.0",
+>>>>>>> b49aab62bc42813380acae5c483140b0f5d51e76
     "react-scripts": "4.0.3",
     "react-swipe-to-delete-component": "^0.5.5",
     "react-swipeable": "^6.1.2",
