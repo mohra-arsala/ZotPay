@@ -113,9 +113,10 @@ const ZotBill = () => {
           className={classes.margin}
           style={{ marginBottom: '90px' }}
         >
-          <InputLabel className={classes.labelStyle} style={{ fontSize: 20 }}>
-            payment
-          </InputLabel>
+          <InputLabel
+            className={classes.labelStyle}
+            style={{ fontSize: 20 }}
+          ></InputLabel>
           <Select
             value={payTo}
             onChange={handleChange}
