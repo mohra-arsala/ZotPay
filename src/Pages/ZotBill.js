@@ -13,7 +13,12 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
+import ZotBillTopBar from '../Components/ZotBillTopBar';
+
 const useStyles = makeStyles({
+  boxdiv: {
+    marginTop: '100px',
+  },
   profile: {
     marginTop: '-60px',
   },
@@ -52,6 +57,7 @@ const ZotBill = () => {
 
   return (
     <div>
+      <ZotBillTopBar></ZotBillTopBar>
       <div className={classes.boxdiv}>
         <Box
           boxShadow={2}
