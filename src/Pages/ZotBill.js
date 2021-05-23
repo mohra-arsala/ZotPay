@@ -30,7 +30,7 @@ const useStyles = makeStyles({
   labelStyle: {
     fontSize: 25,
     marginRight: 180,
-    marginBottom: 45,
+    marginBottom: 20,
   },
   formControl: {
     width: 480,
