@@ -5,7 +5,7 @@ import ZotBill from '../src/Pages/ZotBill';
 function App() {
   return (
     <div className="App">
-      <Dashboard></Dashboard>
+      {/* <Dashboard></Dashboard> */}
       <ZotBill></ZotBill>
     </div>
   );
