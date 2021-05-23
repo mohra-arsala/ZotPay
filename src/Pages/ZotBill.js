@@ -2,6 +2,7 @@ import { Component } from 'react';
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import QuarterDropDownMenu from '../Components/QuarterDropDownMenu';
 import AmountInput from '../Components/AmountInput';
@@ -43,6 +44,11 @@ const useStyles = makeStyles({
   formControl: {
     width: 480,
     marginLeft: '45px',
+  },
+  paytoRoot: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    marginLeft: '55px',
   },
 });
 
@@ -108,25 +114,25 @@ const ZotBill = () => {
         <AmountInput></AmountInput>
       </div>
 
-      <div className={classes.payTo}>
+      <div className={classes.paytoRoot}>
         <InputLabel
           htmlFor="standard-adornment-amount"
           className={classes.labelStyle}
         >
           Pay to
         </InputLabel>
-        <FormControl className={classes.formControl}>
-          <InputLabel
-            id="demo-simple-select-helper-label"
-            style={{ fontSize: 20 }}
-          >
+        <FormControl
+          fullWidth
+          className={classes.margin}
+          style={{ marginBottom: '90px' }}
+        >
+          <InputLabel className={classes.labelStyle} style={{ fontSize: 20 }}>
             payment
           </InputLabel>
           <Select
-            labelId="demo-simple-select-helper-label"
-            id="demo-simple-select-helper"
             value={payTo}
             onChange={handleChange}
+            style={{ width: '450px' }}
           >
             <MenuItem value={10}>
               Tuition Balance &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
@@ -148,7 +154,13 @@ const ZotBill = () => {
             Choose where to make a payment
           </FormHelperText>
         </FormControl>
-        <div className={classes.dropDownDiv}></div>
+
+        <Button
+          variant="contained"
+          style={{ color: '#fff', backgroundColor: '#0057B2', marginLeft: 170 }}
+        >
+          PAY NOW
+        </Button>
       </div>
     </div>
   );
