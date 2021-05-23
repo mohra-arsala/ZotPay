@@ -1,4 +1,3 @@
-import { Component } from 'react';
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -21,20 +20,12 @@ const useStyles = makeStyles({
     marginTop: '100px',
   },
   profile: {
-    marginTop: '-60px',
+    marginTop: '-100px',
   },
   amountinput: {
     marginLeft: '30px',
+    marginTop: '-60px',
     width: '500px',
-  },
-  dropDownDiv: {
-    marginLeft: '1000px',
-  },
-  dropDown: {
-    marginLeft: '150px',
-  },
-  dropDownDiv: {
-    marginTop: '100px',
   },
   labelStyle: {
     fontSize: 25,
@@ -54,9 +45,7 @@ const useStyles = makeStyles({
 
 const ZotBill = () => {
   const classes = useStyles();
-
   const [payTo, setPayTo] = React.useState('');
-
   const handleChange = (event) => {
     setPayTo(event.target.value);
   };
@@ -68,9 +57,9 @@ const ZotBill = () => {
         <Box
           boxShadow={2}
           bgcolor="background.paper"
-          m={5}
-          p={14.5}
-          style={{ width: '15rem', height: '9rem' }}
+          m={10}
+          p={14}
+          style={{ width: '12rem', height: '5.5rem' }}
         >
           <div className={classes.profile}>
             <div className={classes.userPhoto}>
@@ -103,9 +92,7 @@ const ZotBill = () => {
               <p>123456789</p>
             </div>
           </div>
-          <QuarterDropDownMenu
-            className={'quarterDropDown'}
-          ></QuarterDropDownMenu>
+          <QuarterDropDownMenu></QuarterDropDownMenu>
         </Box>
       </div>
 

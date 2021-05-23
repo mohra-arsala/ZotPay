@@ -45,7 +45,7 @@ export default function AmountInput() {
         <FormControl
           fullWidth
           className={classes.margin}
-          style={{ marginBottom: '90px' }}
+          style={{ marginBottom: '50px' }}
         >
           <InputLabel
             htmlFor="standard-adornment-amount"
