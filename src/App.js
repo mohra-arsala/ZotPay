@@ -1,5 +1,6 @@
 import './App.css';
 import Dashboard from '../src/Pages/Dashboard';
+import ActivityPage from '..//src/Pages/ActivityPage';
 import {createMuiTheme, ThemeProvider, responsiveFontSizes} from '@material-ui/core/styles';
 
 let theme = createMuiTheme({
@@ -17,7 +18,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
     <div className="App">
-      <Dashboard></Dashboard>
+      <ActivityPage></ActivityPage>
     </div>
     </ThemeProvider>
   );

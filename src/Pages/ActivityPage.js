@@ -1,13 +1,30 @@
 import { Component } from 'react';
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+import ActivityBar from '../Components/ActivityBar';
+import { Typography } from '@material-ui/core';
+import LongActivity from '../Components/LongActivityCard';
 
-export default class Dashboard extends Component{
-    render(){
-        return(
-            <Button variant="contained" color="primary">
-      Hello World
-    </Button>
+const useStyles = makeStyles((theme) => ({
+    date: {
+      fontSize: 20,
+      color: '#27649f',
+      fontWeight: 'bold',
+      fontFamily: 'roboto',
+      width: '30%',
+      marginTop: 27,
+      marginBottom: 8
+  
+    },
+    
+  }));
+  
+export default function ActivityPage(){
+    const classes = useStyles();
+    return(
+            <div>
+            <ActivityBar></ActivityBar>
+            <LongActivity></LongActivity>
+            </div>
         );
-    }
 }
