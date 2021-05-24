@@ -16,6 +16,8 @@ const useStyles = makeStyles({
   },
   titleHeading: {
     fontFamily: 'Roboto',
+    color: '#363636',
+    fontWeight: 'lighter',
   },
   infoAndExplain: {
     marginTop: '15px',
@@ -27,6 +29,8 @@ const useStyles = makeStyles({
   },
   explain: {
     textAlign: 'right',
+    fontSize: '14px',
+    marginTop: '2px',
   },
 });
 const SummaryItem = (props) => {
