@@ -29,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
     color: '#27649f',
     fontWeight: 'bold',
     left: 0, right: 0,
-    position: 'absolute'
+    position: 'absolute',
+    textAlign: 'center'
   },
 }));
 

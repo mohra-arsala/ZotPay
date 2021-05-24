@@ -3,6 +3,7 @@ import Notification from '../src/Pages/Notification';
 import Dashboard from '../src/Pages/Dashboard';
 import ZotBill from '../src/Pages/ZotBill';
 import ParkingTabs from '../src/Pages/ParkingTabs';
+import ActivityPage from '..//src/Pages/ActivityPage';
 import {createMuiTheme, ThemeProvider, responsiveFontSizes} from '@material-ui/core/styles';
 import ZotBillConfirmation from '../src/Pages/ZotBillConfirmation';
 
@@ -21,11 +22,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
+        <ActivityPage></ActivityPage>
         {/* <Notification></Notification> */}
         {/* <Dashboard></Dashboard> */}
-        <ZotBill></ZotBill>
+        {/* <ZotBill></ZotBill> */}
         {/* <ParkingTabs></ParkingTabs> */}
-        <ZotBillConfirmation></ZotBillConfirmation>
+        {/* <ZotBillConfirmation></ZotBillConfirmation> */}
       </div>
     </ThemeProvider>
   );
