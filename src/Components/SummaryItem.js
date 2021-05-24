@@ -19,9 +19,14 @@ const useStyles = makeStyles({
   },
   infoAndExplain: {
     marginTop: '15px',
+    display: 'flex-column',
   },
   info: {
     fontSize: 20,
+    textAlign: 'right',
+  },
+  explain: {
+    textAlign: 'right',
   },
 });
 const SummaryItem = (props) => {
