@@ -18,10 +18,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function QuarterDropDownMenu() {
   const classes = useStyles();
-  const [age, setAge] = React.useState('');
+  const [quarter, setQuarter] = React.useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setQuarter(event.target.value);
   };
 
   return (
@@ -31,7 +31,7 @@ export default function QuarterDropDownMenu() {
         <Select
           labelId="demo-simple-select-outlined-label"
           id="demo-simple-select-outlined"
-          value={age}
+          value={quarter}
           onChange={handleChange}
           label="Quater"
           className={classes.textsize}
