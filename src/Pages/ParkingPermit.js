@@ -15,8 +15,8 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogActions from '@material-ui/core/DialogActions';
-import CloseIcon from '@material-ui/icons/Close';
-import CameraIcon from '@material-ui/icons/Camera';
+
+import ScanDialog from '../Components/ScanDialog';
 
 const useStyles = makeStyles({
     textFieldContainer: {
@@ -51,6 +51,10 @@ export default function ParkingHourly() {
     }
 
     const handleScanClose = () => {
+        setScanOpen(false);
+    }
+
+    const handleScanConfirm = () => {
         setScanOpen(false);
         setValue("7TYP290");
     }
@@ -147,22 +151,8 @@ export default function ParkingHourly() {
                 <Button variant="contained" color="primary" onClick={handleConfirmOpen}>Pay</Button>
             </div>
 
-            {/* Scan Dialog */}
-            <Dialog onClose={handleScanClose} open={scanOpen}>
-                <DialogTitle style={{backgroundColor: '#ffd200'}}>
-                    <IconButton onClick={handleScanClose} color="primary">
-                        <CloseIcon/>
-                    </IconButton>
-                </DialogTitle>
-                <DialogContent dividers>
-                    <img src="./license_plate.jpg" alt="License Plate" style={{width: '100%'}}/>
-                </DialogContent>
-                <DialogActions style={{justifyContent: 'center', backgroundColor: '#0064a4'}}>
-                    <IconButton onClick={handleScanClose} style={{color: '#ffffff'}}>
-                        <CameraIcon/>
-                    </IconButton>
-                </DialogActions>
-            </Dialog>
+            {/* Dialogs */}
+            <ScanDialog onClose={handleScanClose} onConfirm={handleScanConfirm} open={scanOpen}></ScanDialog>
 
             {/* Confirm Dialog */}
             <Dialog onClose={handleConfirmClose} open={confirmOpen}>
