@@ -14,6 +14,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 import ZotBillTopBar from '../Components/ZotBillTopBar';
+
 const useStyles = makeStyles({
   boxdiv: {
     marginTop: '100px',
@@ -40,7 +41,12 @@ const useStyles = makeStyles({
     flexWrap: 'wrap',
     marginLeft: '55px',
   },
+  overallDiv: {
+    margin: 'auto',
+    width: '580px',
+  },
 });
+
 const ZotBill = () => {
   const classes = useStyles();
   const [payTo, setPayTo] = React.useState('');

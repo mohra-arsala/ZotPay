@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="App">
       {/* <Dashboard></Dashboard> */}
-      {/* <ZotBill></ZotBill> */}
-      <ZotBillConfirmation></ZotBillConfirmation>
+      <ZotBill></ZotBill>
+      {/* <ZotBillConfirmation></ZotBillConfirmation> */}
     </div>
   );
 }
