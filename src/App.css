@@ -43,10 +43,10 @@ body {
   text-align: left;
 }
 
-.statusBar {
+/* .statusBar {
   background-color: #27649F;
   height: 22px;
-}
+} */
 
 .pageTitle {
   display: inline-block;

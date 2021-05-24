@@ -34,7 +34,7 @@ export default class Notification extends Component{
         return(
             <div id="main">
                 <div className="topNav">
-                    <div className="statusBar"></div>
+                    {/* <div className="statusBar"></div> */}
                     <div className="pageTitle">
                         <ArrowBackIosIcon className="backIcon"></ArrowBackIosIcon>
                         <NotificationsIcon className="notifIcon"></NotificationsIcon> 
