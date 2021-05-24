@@ -11,12 +11,10 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogActions from '@material-ui/core/DialogActions';
 
 import ScanDialog from '../Components/ScanDialog';
+import ConfirmDialog from '../Components/ConfirmDialog';
+import ConfirmationDialog from '../Components/ConfirmationDialog';
 
 const useStyles = makeStyles({
     textFieldContainer: {
@@ -154,32 +152,21 @@ export default function ParkingHourly() {
             {/* Dialogs */}
             <ScanDialog onClose={handleScanClose} onConfirm={handleScanConfirm} open={scanOpen}></ScanDialog>
 
-            {/* Confirm Dialog */}
-            <Dialog onClose={handleConfirmClose} open={confirmOpen}>
-                <DialogTitle>
-                    Confirm purchase
-                </DialogTitle>
-                <DialogContent>
+            <ConfirmDialog 
+                onClose={handleConfirmClose} 
+                onConfirm={handleConfirmationOpen} 
+                open={confirmOpen} 
+                title='Confirm purchase'>
                     Are you sure you want to purchase this S-type permit for Zone 1 from Sep 23, 2021 to June 9, 2022?
-                </DialogContent>
-                <DialogActions>
-                    <Button color="primary" onClick={handleConfirmClose}>No</Button>
-                    <Button color="primary" onClick={handleConfirmationOpen}>Yes</Button>
-                </DialogActions>
-            </Dialog>
+            </ConfirmDialog>
 
-            {/* Confirmation Dialog */}
-            <Dialog onClose={handleConfirmationClose} open={confirmationOpen}>
-                <DialogTitle>
-                    Thank you for your purchase
-                </DialogTitle>
-                <DialogContent>
-                   Please check your email for more information on retrieving your physical permit.
-                </DialogContent>
-                <DialogActions>
-                    <Button color="primary" onClick={handleConfirmationClose}>Ok</Button>
-                </DialogActions>
-            </Dialog>
+            <ConfirmationDialog 
+                onClose={handleConfirmationClose} 
+                onConfirm={handleConfirmationClose} 
+                open={confirmationOpen} 
+                title="Thank you for your purchase">
+                    Please check your email for more information on retrieving your physical permit.
+            </ConfirmationDialog>
         </Container>
     );
 }
