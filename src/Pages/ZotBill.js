@@ -14,10 +14,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 import ZotBillTopBar from '../Components/ZotBillTopBar';
+
 const useStyles = makeStyles({
-  overallDiv: {
-    textAlign: 'center'
-  },
   boxdiv: {
     marginTop: '100px',
   },
@@ -43,36 +41,18 @@ const useStyles = makeStyles({
     flexWrap: 'wrap',
     marginLeft: '55px',
   },
+  overallDiv: {
+    margin: 'auto',
+    width: '580px',
+  },
 });
+
 const ZotBill = () => {
   const classes = useStyles();
   const [payTo, setPayTo] = React.useState('');
   const handleChange = (event) => {
     setPayTo(event.target.value);
   };
-
-  const summaryItems = [
-    {
-      title: 'From',
-      info: 'ZotPay Balance',
-      explanation: 'available balance $100.00',
-    },
-    {
-      title: 'To',
-      info: 'UCI Health Balance',
-      explanation: 'current balance $350.00',
-    },
-    {
-      title: 'Pay Amount',
-      info: '$100.00',
-      explanation: 'after payment $250.00',
-    },
-    {
-      title: 'Date',
-      info: 'May 9, 2021',
-      explanation: 'on time',
-    },
-  ];
 
   return (
     <div>
