@@ -23,8 +23,8 @@ function App() {
       <div className="App">
         {/* <Notification></Notification> */}
         {/* <Dashboard></Dashboard> */}
-        {/* <ZotBill></ZotBill> */}
-        <ParkingTabs></ParkingTabs>
+        <ZotBill></ZotBill>
+        {/* <ParkingTabs></ParkingTabs> */}
         <ZotBillConfirmation></ZotBillConfirmation>
       </div>
     </ThemeProvider>

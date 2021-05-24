@@ -15,6 +15,9 @@ import Select from '@material-ui/core/Select';
 
 import ZotBillTopBar from '../Components/ZotBillTopBar';
 const useStyles = makeStyles({
+  overallDiv: {
+    textAlign: 'center'
+  },
   boxdiv: {
     marginTop: '100px',
   },
