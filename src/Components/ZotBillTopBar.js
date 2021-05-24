@@ -21,6 +21,7 @@ const useStyles = makeStyles({
     color: '#27649f',
     fontWeight: 'bold',
     letterSpacing: '2px',
+    textAlign: 'center'
   },
 });
 

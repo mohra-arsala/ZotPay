@@ -44,6 +44,7 @@ const useStyles = makeStyles({
   overallDiv: {
     margin: 'auto',
     width: '580px',
+    textAlign: 'center'
   },
 });
 
