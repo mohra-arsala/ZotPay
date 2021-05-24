@@ -40,7 +40,8 @@ export default function ParkingHourly() {
 
     const classes = useStyles();
     const [scanOpen, setScanOpen] = React.useState(false);
-    const [license, setValue] = React.useState("");
+    const [license, setLicense] = React.useState("");
+    const [isDisabled, disable] = React.useState(true);
     const [confirmOpen, setConfirmOpen] = React.useState(false);
     const [confirmationOpen, setConfirmationOpen] = React.useState(false);
 
@@ -54,7 +55,8 @@ export default function ParkingHourly() {
 
     const handleScanConfirm = () => {
         setScanOpen(false);
-        setValue("7TYP290");
+        setLicense("7TYP290");
+        disable(false);
     }
 
     const handleConfirmOpen = () => {
@@ -146,7 +148,7 @@ export default function ParkingHourly() {
                 />
             </div>
             <div className={classes.payButtonContainer}>
-                <Button variant="contained" color="primary" onClick={handleConfirmOpen}>Pay</Button>
+                <Button disabled={isDisabled} variant="contained" color="primary" onClick={handleConfirmOpen}>Pay</Button>
             </div>
 
             {/* Dialogs */}

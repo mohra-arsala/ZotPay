@@ -23,7 +23,7 @@ export default function ParkingHourly() {
 
     const classes = useStyles();
     const [scanOpen, setScanOpen] = React.useState(false);
-    const [license, setValue] = React.useState("");
+    const [license, setLicense] = React.useState("");
 
     const handleScanOpen = () => {
         setScanOpen(true);
@@ -35,7 +35,7 @@ export default function ParkingHourly() {
 
     const handleScanConfirm = () => {
         setScanOpen(false);
-        setValue("7TYP290");
+        setLicense("7TYP290");
     }
 
     return(
