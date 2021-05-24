@@ -1,4 +1,5 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
@@ -17,8 +18,29 @@ import DialogActions from '@material-ui/core/DialogActions';
 import CloseIcon from '@material-ui/icons/Close';
 import CameraIcon from '@material-ui/icons/Camera';
 
+const useStyles = makeStyles({
+    textFieldContainer: {
+        margin: '20px'
+    },
+    textField: {
+        width: '100%'
+    },
+    formControl: {
+        width: '100%'
+    },
+    select: {
+        margin: '20px'
+    },
+    payButtonContainer: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        margin: '20px'
+    }
+});
+
 export default function ParkingHourly() {
 
+    const classes = useStyles();
     const [scanOpen, setScanOpen] = React.useState(false);
     const [license, setValue] = React.useState("");
     const [confirmOpen, setConfirmOpen] = React.useState(false);
@@ -55,7 +77,7 @@ export default function ParkingHourly() {
 
             {/* Tab Content */}
 
-            <div className="parkingTextField_container">
+            <div className={classes.textFieldContainer}>
                 <TextField 
                     required
                     label="License Plate"
@@ -69,15 +91,15 @@ export default function ParkingHourly() {
                             </IconButton>
                         </InputAdornment>,
                     }}
-                    className="parkingTextField"
+                    className={classes.textField}
                 />
             </div>
-            <FormControl required variant="outlined" className="parkingSelect_formControl">
-                <InputLabel htmlFor="outlined-age-native-simple" className="parkingSelect">Permit Type</InputLabel>
+            <FormControl required variant="outlined" className={classes.formControl}>
+                <InputLabel htmlFor="outlined-age-native-simple" className={classes.select}>Permit Type</InputLabel>
                 <Select
                     native
                     label="Permit Type"
-                    className="parkingSelect"
+                    className={classes.select}
                 >
                     <option>"S" Zone Commuter</option>
                     <option>"P" Preferred Zone Commuter</option>
@@ -87,12 +109,12 @@ export default function ParkingHourly() {
                     <option>"MBA" Permit</option>
                 </Select>
             </FormControl>
-            <FormControl required variant="outlined" className="parkingSelect_formControl">
-                <InputLabel htmlFor="outlined-age-native-simple" className="parkingSelect">Zone</InputLabel>
+            <FormControl required variant="outlined" className={classes.formControl}>
+                <InputLabel htmlFor="outlined-age-native-simple" className={classes.select}>Zone</InputLabel>
                 <Select
                     native
                     label="Zone"
-                    className="parkingSelect"
+                    className={classes.select}
                 >
                     <option>Zone 1: Mesa Parking Structure, Lots 14, 14A, ARC, 36</option>
                     <option>Zone 3: Lots 16H, 70, ARC, 36</option>
@@ -101,27 +123,27 @@ export default function ParkingHourly() {
                     <option>Zone 6: Student Center Parking Structure, Lots 5, 36, ARC</option>
                 </Select>
             </FormControl>
-            <div className="parkingTextField_container">
+            <div className={classes.textFieldContainer}>
                 <TextField 
                     required
                     type="date"
                     label="Permit Start Date"
                     defaultValue="2021-09-23"
                     variant="outlined"
-                    className="parkingTextField"
+                    className={classes.textField}
                 />
             </div>
-            <div className="parkingTextField_container">
+            <div className={classes.textFieldContainer}>
                 <TextField 
                     required
                     type="date"
                     label="Permit End Date"
                     defaultValue="2022-06-09"
                     variant="outlined"
-                    className="parkingTextField"
+                    className={classes.textField}
                 />
             </div>
-            <div className="parkingPayButton_container">
+            <div className={classes.payButtonContainer}>
                 <Button variant="contained" color="primary" onClick={handleConfirmOpen}>Pay</Button>
             </div>
 

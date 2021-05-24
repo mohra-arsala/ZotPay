@@ -1,15 +1,11 @@
-import { Component } from 'react';
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import IconButton from '@material-ui/core/IconButton';
 import CameraAlt from '@material-ui/icons/CameraAlt';
-import Typography from '@material-ui/core/Typography';
-
-import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
@@ -18,8 +14,20 @@ import DialogActions from '@material-ui/core/DialogActions';
 import CloseIcon from '@material-ui/icons/Close';
 import CameraIcon from '@material-ui/icons/Camera';
 
+import ParkingDurationSpinner from '../Components/ParkingDurationSpinner';
+
+const useStyles = makeStyles({
+    textFieldContainer: {
+        margin: '20px'
+    },
+    textField: {
+        width: '100%'
+    }
+});
+
 export default function ParkingHourly() {
 
+    const classes = useStyles();
     const [scanOpen, setScanOpen] = React.useState(false);
     const [license, setValue] = React.useState("");
 
@@ -34,7 +42,7 @@ export default function ParkingHourly() {
 
     return(
         <Container maxWidth="sm">
-            <div className="parkingTextField_container">
+            <div className={classes.textFieldContainer}>
                 <TextField 
                     required
                     label="License Plate"
@@ -48,52 +56,11 @@ export default function ParkingHourly() {
                             </IconButton>
                         </InputAdornment>,
                     }}
-                    className="parkingTextField"
+                    className={classes.textField}
                 />
             </div>
 
-            <div className="modalBottom">
-                <div className="durationDiv">
-                <div className="parkingDurationHeader">
-                    <Typography variant="h6" component="div">
-                        Set Parking Duration
-                    </Typography>
-                </div>
-                    <div>
-                        <div>
-                            <ArrowDropUpIcon className="upIcon"></ArrowDropUpIcon>
-                            <ArrowDropUpIcon className="upIcon"></ArrowDropUpIcon>
-                        </div>
-                        <div>
-                            <p className="incrementTimeWidget">00:00</p>
-                        </div>
-                        <div>
-                            <ArrowDropDownIcon className="downIcon"></ArrowDropDownIcon>
-                            <ArrowDropDownIcon className="downIcon"></ArrowDropDownIcon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* <div className="parkingTextField_container">
-                <TextField 
-                    label="Number of Days"
-                    type="number"
-                    defaultValue="0"
-                    variant="outlined"
-                    className="parkingTextField"
-                />
-            </div>
-
-            <div className="parkingTextField_container">
-                <TextField 
-                    label="Number of Hours"
-                    type="number"
-                    defaultValue="0"
-                    variant="outlined"
-                    className="parkingTextField"
-                />
-            </div> */}
+            <ParkingDurationSpinner></ParkingDurationSpinner>
 
             {/* Scan Dialog */}
             <Dialog onClose={handleScanClose} open={scanOpen}>

@@ -22,11 +22,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <ActivityPage></ActivityPage>
+        {/* <ActivityPage></ActivityPage> */}
         {/* <Notification></Notification> */}
         {/* <Dashboard></Dashboard> */}
         {/* <ZotBill></ZotBill> */}
-        {/* <ParkingTabs></ParkingTabs> */}
+        <ParkingTabs></ParkingTabs>
         {/* <ZotBillConfirmation></ZotBillConfirmation> */}
       </div>
     </ThemeProvider>

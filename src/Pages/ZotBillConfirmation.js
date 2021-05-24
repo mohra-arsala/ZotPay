@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import ZotBillTopBar from '../Components/ZotBillTopBar';
+import ZotBillTopBar from '../Components/BackBar';
 import SummaryItem from '../Components/SummaryItem';
 import Button from '@material-ui/core/Button';
 
@@ -44,7 +44,7 @@ const ZotBillConfirmation = () => {
   return (
     <div>
       <div>
-        <ZotBillTopBar></ZotBillTopBar>
+        <ZotBillTopBar>Zot Bill</ZotBillTopBar>
       </div>
       <h3
         style={{

@@ -1,11 +1,14 @@
 import React from 'react';
 
 import AppBar from '@material-ui/core/AppBar';
+import ToolBar from '@material-ui/core/Toolbar'
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 import ParkingHourly from './ParkingHourly';
 import ParkingPermit from './ParkingPermit';
+
+import ZotBillTopBar from '../Components/BackBar';
 
 export default function ParkingTabs() {
         const [value, setValue] = React.useState(0);
@@ -29,6 +32,9 @@ export default function ParkingTabs() {
         return (
             <div>
                 <AppBar position="static">
+                    <ToolBar>
+                        <ZotBillTopBar>Zot Parking</ZotBillTopBar>
+                    </ToolBar>
                     <Tabs variant="fullWidth" value={value} onChange={handleTab}>
                         <Tab label="Pay By Time"/>
                         <Tab label="Pay Permit"/>

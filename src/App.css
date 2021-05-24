@@ -238,35 +238,3 @@ body {
   padding-left: 25px;
   padding-right: 25px;
 }
-
-/* Parking */
-
-.parkingContainer {
-  margin: 50px;
-}
-
-.parkingTextField_container {
-  margin: 20px
-}
-
-.parkingTextField {
-  width: 100%
-}
-
-.parkingSelect_formControl {
-  width: 100%
-}
-
-.parkingSelect {
-  margin: 20px
-}
-
-.parkingDurationHeader {
-  text-align: center;
-}
-
-.parkingPayButton_container {
-  display:flex;
-  justify-content: flex-end;
-  margin: 20px;
-}
