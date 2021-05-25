@@ -40,13 +40,13 @@ export default function BottomNav() {
     <Activity></Activity>
     <div className={classes.bottom}>
     <ButtonBar></ButtonBar>
-    < BottomNavigation value = { value } className={classes.menu}
+    {/* < BottomNavigation value = { value } className={classes.menu}
         onChange = {(event, newValue) => {setValue(newValue);}}
         showLabels>
         <BottomNavigationAction  className={classes.tab} icon={<LocalParkingIcon/>} label = "Zot Parking"/> 
         <BottomNavigationAction className={classes.tab} icon={<HomeIcon/>} label = "Home"/> 
         <BottomNavigationAction className={classes.tab} icon={<AttachMoneyIcon/>} label = "Zot Bill"/>   
-    </BottomNavigation >
+    </BottomNavigation > */}
     </div>
     </div>
     );

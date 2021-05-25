@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     width: '50ch',
   },
   labelStyle: {
-    fontSize: 30,
+    fontSize: 24,
     marginBottom: theme.spacing(7),
   },
 }));
@@ -41,29 +41,26 @@ export default function AmountInput() {
 
   return (
     <div className={classes.root}>
-      <div>
-        <FormControl
-          fullWidth
-          className={classes.margin}
-          style={{ marginBottom: '50px' }}
+      <FormControl
+        fullWidth
+        className={classes.margin}
+        style={{ marginBottom: '50px' }}
+      >
+        <InputLabel
+          htmlFor="standard-adornment-amount"
+          className={classes.labelStyle}
         >
-          <InputLabel
-            htmlFor="standard-adornment-amount"
-            className={classes.labelStyle}
-          >
-            Amount
-          </InputLabel>
-          <p> </p>
-          <p> </p>
-          <Input
-            id="standard-adornment-amount"
-            value={values.amount}
-            onChange={handleChange('amount')}
-            startAdornment={<InputAdornment position="start">$</InputAdornment>}
-            style={{ width: '450px' }}
-          />
-        </FormControl>
-      </div>
+          Amount
+        </InputLabel>
+        <p> </p>
+        <Input
+          id="standard-adornment-amount"
+          value={values.amount}
+          onChange={handleChange('amount')}
+          startAdornment={<InputAdornment position="start">$</InputAdornment>}
+          // style={{ width: '450px' }}
+        />
+      </FormControl>
     </div>
   );
 }

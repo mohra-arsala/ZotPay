@@ -6,6 +6,7 @@ import ParkingTabs from '../src/Pages/ParkingTabs';
 import ActivityPage from '..//src/Pages/ActivityPage';
 import {createMuiTheme, ThemeProvider, responsiveFontSizes} from '@material-ui/core/styles';
 import ZotBillConfirmation from '../src/Pages/ZotBillConfirmation';
+import HomeTabs from '../src/Pages/HomeTabs';
 
 let theme = createMuiTheme({
   palette:{
@@ -26,8 +27,9 @@ function App() {
         {/* <Notification></Notification> */}
         {/* <Dashboard></Dashboard> */}
         {/* <ZotBill></ZotBill> */}
-        <ParkingTabs></ParkingTabs>
+        {/* <ParkingTabs></ParkingTabs> */}
         {/* <ZotBillConfirmation></ZotBillConfirmation> */}
+        <HomeTabs></HomeTabs>
       </div>
     </ThemeProvider>
   );
