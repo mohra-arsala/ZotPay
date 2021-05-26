@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import ConfirmDialog from '../Components/ConfirmDialog';
 import ConfirmationDialog from '../Components/ConfirmationDialog';
 import BottomNavigation from '../Components/BottomNavigation';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   mainButtonsDiv: {
@@ -114,10 +115,12 @@ const ZotBillConfirmation = () => {
           </Button>
         </div>
 
-        <div className={classes.mainButtonsDiv}>
+            <div className={classes.mainButtonsDiv}>
           <Button
             variant="contained"
             style={{ backgroundColor: '#909090', color: '#fff' }}
+            component={Link}
+            to="/zotbill"
           >
             CANCEL
           </Button>
