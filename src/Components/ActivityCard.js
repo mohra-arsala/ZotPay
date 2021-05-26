@@ -21,8 +21,8 @@ const useStyles = makeStyles({
     margin: 'auto',
     marginTop: '10%',
     minWidth: 330,
-    marginBottom: '20%',
-    minWidth: 290
+    minWidth: 290,
+    marginBottom: '34%'
   },
 
   margin:{
