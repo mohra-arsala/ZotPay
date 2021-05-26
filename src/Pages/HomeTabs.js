@@ -8,6 +8,7 @@ import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 
 import ParkingTabs from './ParkingTabs';
 import Dashboard from './Dashboard';
+import ActivityPage from './ActivityPage';
 import ZotBill from './ZotBill';
 import ZotBill2 from './ZotBill2'
 

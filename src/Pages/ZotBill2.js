@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import ZotBillTopBar from '../Components/BackBar';
+import OnlyBar from '../Components/BarOnly';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import QuarterDropDownMenu from '../Components/QuarterDropDownMenu';
@@ -53,7 +53,7 @@ const ZotBill2 = () => {
 
     return(
         <div>
-            <ZotBillTopBar>Zot Bill</ZotBillTopBar>
+            <OnlyBar>Zot Bill</OnlyBar>
             <Container maxWidth='sm'>
                 <Box
                 boxShadow={2}

@@ -13,45 +13,17 @@ import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 
 import Container from '@material-ui/core/Container';
 
-const useStyles = makeStyles({
-    menu: {
-        color: '#ffffff',
-        backgroundColor: '#27649f',
-        left: 0,right: 0,
-        width: '100%',
-        maxheight: 56,
-    },
-    bottom:{
-        position: 'relative',
-        left: 0, right: 0, 
-    },
-    tab: {
-        width: '100%',
-        color: '#fff',
-        fontSize: 12,
-    }
-});
 
 export default function BottomNav() {
-    const classes = useStyles();
     const [value, setValue] = React.useState(0);
     return ( 
     <div>
         <Bar></Bar>
-        <Container maxWidth='sm'>
+        <Container>
             <Balance></Balance>
             <Activity></Activity>
-        </Container>
-        <div className={classes.bottom}>
-            <ButtonBar></ButtonBar>
-            {/* < BottomNavigation value = { value } className={classes.menu}
-                onChange = {(event, newValue) => {setValue(newValue);}}
-                showLabels>
-                <BottomNavigationAction  className={classes.tab} icon={<LocalParkingIcon/>} label = "Zot Parking"/> 
-                <BottomNavigationAction className={classes.tab} icon={<HomeIcon/>} label = "Home"/> 
-                <BottomNavigationAction className={classes.tab} icon={<AttachMoneyIcon/>} label = "Zot Bill"/>   
-            </BottomNavigation > */}
-        </div>
+        </Container >
+        <ButtonBar></ButtonBar>
     </div>
     );
 }

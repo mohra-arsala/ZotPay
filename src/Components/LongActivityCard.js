@@ -17,33 +17,23 @@ import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 
 const useStyles = makeStyles({
   root: {
-    width: '84%',
+    width: '88%',
     margin: 'auto',
-    marginTop: 26,
-    minWidth: 376,
+    marginTop: '20%',
+    borderRadius: 10,
+    marginBottom: '20%'
   },
   scroll:{
     overflowY: 'scroll'
-  },
-  margin:{
-    color: '#27649f',
-    marginRight: 0,
-    left: '80%',
-    top: -10
   },
   money:{
     color: '#27649f',
   },
   list:{
     width: '100%',
-    marginBottom: 0
-  },
-  c:{
-    minHeight: 300,
   },
   bullet: {
     display: 'inline-block',
-    margin: '0 2px',
     transform: 'scale(0.8)',
   },
   button:{
@@ -56,29 +46,28 @@ const useStyles = makeStyles({
     color: '#fff'
   },
   ava:{
-    backgroundColor: '#27649f'
+    backgroundColor: '#27649f',
+    position: 'relative'
   },
   box:{
       width: '40%',
       margin: 'auto',
   },
   date: {
-      fontSize: 20,
+      fontSize: 18,
       color: '#27649f',
       fontWeight: 'bold',
       fontFamily: 'roboto',
       width: '8%',
-      marginTop: 10,
-      marginBottom: 8
+      marginTop: 15,
   },
   date2: {
-    fontSize: 20,
+    fontSize: 18,
     color: '#27649f',
     fontWeight: 'bold',
     fontFamily: 'roboto',
     width: '10%',
-    marginTop: 10,
-    marginBottom: 8
+    marginTop: 15,
 },
   title2: {
     fontSize: 18,
@@ -88,6 +77,14 @@ const useStyles = makeStyles({
     margin: 'auto',
     lineHeight: 2.5
   },
+  ll:{
+    width: '100%',
+    paddingLeft: 0,
+    paddingRight: 0
+  },
+  contain:{
+    marginBottom: '7%'
+  }
 });
 
 export default function Activity() {
@@ -101,7 +98,8 @@ export default function Activity() {
       <Typography  className={classes.date}>Today</Typography>
         <div className={classes.scroll}>
         <List className={classes.list} className={classes.scroll}>
-      <ListItem>
+      <div className={classes.contain}>
+      <ListItem className={classes.ll}>
         <ListItemAvatar>
           <Avatar className={classes.ava}>
             <LocalParkingIcon />
@@ -113,7 +111,7 @@ export default function Activity() {
         </Typography>
       </ListItem>
       <Divider variant="inset" component="li" />
-      <ListItem>
+      <ListItem className={classes.ll}>
         <ListItemAvatar>
           <Avatar className={classes.ava}>
             <StorefrontIcon />
@@ -125,7 +123,7 @@ export default function Activity() {
         </Typography>
       </ListItem>
       <Divider variant="inset" component="li" />
-      <ListItem>
+      <ListItem className={classes.ll}>
         <ListItemAvatar>
           <Avatar className={classes.ava}>
             <AttachMoneyIcon/>
@@ -136,8 +134,10 @@ export default function Activity() {
           - $30.00
         </Typography>
       </ListItem>
+      </div>
+      <div className={classes.contain}>
       <Typography  className={classes.date2}>2021/4/10</Typography>
-      <ListItem>
+      <ListItem className={classes.ll}>
         <ListItemAvatar>
           <Avatar className={classes.ava}>
             <LocalParkingIcon />
@@ -147,9 +147,9 @@ export default function Activity() {
         <Typography className={classes.money} gutterBottom>
           - $20.00
         </Typography>
-      </ListItem>
+      </ListItem >
       <Divider variant="inset" component="li" />
-      <ListItem>
+      <ListItem className={classes.ll}>
         <ListItemAvatar>
           <Avatar className={classes.ava}>
             <StorefrontIcon />
@@ -160,8 +160,11 @@ export default function Activity() {
           - $10.00
         </Typography>
       </ListItem>
+      </div>
+
+      <div className={classes.contain}>
       <Typography  className={classes.date2}>2021/3/20</Typography>
-      <ListItem>
+      <ListItem className={classes.ll}>
         <ListItemAvatar>
           <Avatar className={classes.ava}>
             <StorefrontIcon />
@@ -172,7 +175,7 @@ export default function Activity() {
           - $10.00
         </Typography>
       </ListItem>
-      <ListItem>
+      <ListItem className={classes.ll}>
         <ListItemAvatar>
           <Avatar className={classes.ava}>
             <StorefrontIcon />
@@ -183,6 +186,9 @@ export default function Activity() {
           - $10.00
         </Typography>
       </ListItem>
+    </div>
+
+
     </List>
     </div>
       </CardContent>

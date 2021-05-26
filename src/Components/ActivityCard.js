@@ -17,60 +17,59 @@ import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 
 const useStyles = makeStyles({
   root: {
-    width: '84%',
+    width: '95%',
     margin: 'auto',
-    marginTop: 26,
-    // minWidth: 376,
+    marginTop: '10%',
+    minWidth: 330,
+    marginBottom: '20%',
+    minWidth: 290
   },
-  scroll:{
-    overflowY: 'scroll'
-  },
+
   margin:{
     color: '#27649f',
-    marginRight: 0,
-    left: '70%',
-    top: -10
+    left: '75%',
+    paddingTop: 0,
+    marginTop: 0,
+    top: 0,
+    position: 'relative'
   },
   money:{
     color: '#27649f',
   },
   list:{
     width: '100%',
-    marginBottom: 0
   },
-  c:{
-    minHeight: 300,
-  },
+
   bullet: {
     display: 'inline-block',
     margin: '0 2px',
     transform: 'scale(0.8)',
   },
-  button:{
-      backgroundColor: '#27649f',
-      color: '#fff',
-      marginRight: 56
-  },
-  button2:{
-    backgroundColor: '#27649f',
-    color: '#fff'
-  },
   ava:{
     backgroundColor: '#27649f'
   },
-  box:{
-      width: '40%',
-      margin: 'auto',
-  },
+
   title: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#27649f',
     fontFamily: 'roboto',
-    margin: 'auto',
+    textAlign: 'center',
     marginTop: 10,
     marginBottom: 15
   },
+
+  ll:{
+    width: '100%',
+    paddingLeft: 0,
+    paddingRight: 0
+  },
+  con:{
+    paddingBottom: 0,
+    marginBottom: 0,
+    bottom: 0
+  },
+
   title2: {
     fontSize: 18,
     fontWeight: 'bold',
@@ -88,13 +87,12 @@ export default function Activity() {
   return (
     <Card className={classes.root} variant="outlined">
         <div className={classes.c}>
-      <CardContent>
+      <CardContent className={classes.con}>
         <Typography className={classes.title} gutterBottom>
           Recent Activity
         </Typography>
-        <div className={classes.scroll}>
         <List className={classes.list} className={classes.scroll}>
-      <ListItem>
+      <ListItem className={classes.ll}>
         <ListItemAvatar>
           <Avatar className={classes.ava}>
             <LocalParkingIcon />
@@ -106,7 +104,7 @@ export default function Activity() {
         </Typography>
       </ListItem>
       <Divider variant="inset" component="li" />
-      <ListItem>
+      <ListItem className={classes.ll}>
         <ListItemAvatar>
           <Avatar className={classes.ava}>
             <StorefrontIcon />
@@ -118,7 +116,7 @@ export default function Activity() {
         </Typography>
       </ListItem>
       <Divider variant="inset" component="li" />
-      <ListItem>
+      <ListItem className={classes.ll}>
         <ListItemAvatar>
           <Avatar className={classes.ava}>
             <AttachMoneyIcon/>
@@ -130,7 +128,6 @@ export default function Activity() {
         </Typography>
       </ListItem>
     </List>
-    </div>
       </CardContent>
       <CardActions> 
       <Button size="small" className={classes.margin} onClick={() => {}}>VIEW ALL</Button>      

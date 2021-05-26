@@ -12,8 +12,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-
-import ZotBillTopBar from '../Components/BackBar';
+import OnlyBar from '../Components/BarOnly';
 
 const useStyles = makeStyles({
   boxdiv: {
@@ -57,7 +56,7 @@ const ZotBill = () => {
 
   return (
     <div className={classes.overallDiv}>
-      <ZotBillTopBar>Zot Bill</ZotBillTopBar>
+      <OnlyBar>Zot Bill</OnlyBar>
       <div className={classes.boxdiv}>
         <Box
           boxShadow={2}
