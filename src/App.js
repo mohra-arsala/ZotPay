@@ -23,6 +23,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
+        <Switch>
+          <Route path="/confirmation">
+            <ZotBillConfirmation />
+          </Route>
+        </Switch>
         {/* <ActivityPage></ActivityPage> */}
         {/* <Notification></Notification> */}
         {/* <Dashboard></Dashboard> */}
