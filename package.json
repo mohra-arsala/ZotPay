@@ -5,12 +5,20 @@
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/styles": "^4.11.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-easy-swipe": "0.0.21",
+    "react-modal": "^3.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-swipe-to-delete-component": "^0.5.5",
+    "react-swipeable": "^6.1.2",
+    "react-swipeable-views": "^0.13.9",
+    "typeface-roboto": "^1.1.13",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
