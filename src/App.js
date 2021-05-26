@@ -7,6 +7,7 @@ import ActivityPage from '..//src/Pages/ActivityPage';
 import {createMuiTheme, ThemeProvider, responsiveFontSizes} from '@material-ui/core/styles';
 import ZotBillConfirmation from '../src/Pages/ZotBillConfirmation';
 import HomeTabs from '../src/Pages/HomeTabs';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 let theme = createMuiTheme({
   palette:{
