@@ -9,8 +9,8 @@ const useStyles = makeStyles({
     buttonbar: {
         height: 36,
         width: '100%',
-        minWidth: 376,
-        left: 0,right: 0,
+        minWidth: 100,
+        maxWidth: 2000,
         backgroundColor: "#f9d44e",
         color: '#27649f',
         fontWeight: 'bold',
@@ -21,13 +21,10 @@ const useStyles = makeStyles({
     fab:{
         backgroundColor: "#f9d44e",
         height: 56, width: 56,
-        alignSelf: 'center',
+        zIndex: 10
     },
     root:{
-        position: 'relative',
-        alignItems: 'center',
-        left: 0, right:0,
-
+        marginTop: '8%'
     }
 });
 
@@ -37,11 +34,11 @@ export default function ButtonBar() {
 
     return ( 
         <div className={classes.root} onDrag={() => {}}>
-        <Fab className={classes.fab} aria-label="add">
+        {/* <Fab aria-label="add">
         <WifiTetheringIcon className={classes.icon}/>
-        </Fab>
-        <Button variant="contained" className={classes.buttonbar}>
-        Swipe to pay for merchants</Button>
+        </Fab> */}
+        {/* <Button variant="contained" className={classes.buttonbar}>
+        Swipe to pay for merchants</Button> */}
         </div>
     );
 }

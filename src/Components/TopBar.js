@@ -7,28 +7,26 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-
-  },
   icon:{
     color: '#27649f',
+    position: 'absolute'
   },
   bar:{
-    height: 56,
+    height: 60,
     width: '100%',
-    minWidth: 376,
+    minWidth: 290,
     backgroundColor: '#f9d247',
+    position: 'fixed', 
+    top: 0
 
   },
   title: {
-    flexGrow: 1,
-    fontSize: 24,
+    fontSize: 22,
     fontFamily: 'Roboto',
     color: '#27649f',
     fontWeight: 'bold',
-    left: 0, right: 0,
-    position: 'absolute'
+    letterSpacing: '2px',
+    margin: 'auto'
   },
 }));
 
@@ -39,8 +37,8 @@ export default function Bar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.bar}>
         <Toolbar>
-          <IconButton onClick={() => {}}>
-          <NotificationsIcon className={classes.icon}/>
+          <IconButton className={classes.icon} onClick={() => {}}>
+          <NotificationsIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             ZotPay

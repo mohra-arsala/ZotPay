@@ -6,41 +6,45 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Text from 'react'
 
 const useStyles = makeStyles({
   root: {
-    width: '84%',
+    display: 'strech',
+    marginTop: '25%',
     margin: 'auto',
-    marginTop: 33
+    width: '97%',
+    minWidth: 290
+
   },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
+
   button:{
       backgroundColor: '#27649f',
       color: '#fff',
-      marginRight: 56
+      marginRight: '6%',
   },
   button2:{
     backgroundColor: '#27649f',
-    color: '#fff'
+    color: '#fff',
   },
+  
   box:{
-      width: '40%',
+      textAlign: 'center',
       margin: 'auto',
+      width: '60%'
   },
   twobutton:{
-      margin: 'auto',
-      marginBottom: 17
+      flexDirection: 'row',
+      width: '100%',
+      textAlign: 'center',
+      marginBottom: '8%'
   },
   title: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#27649f',
     fontFamily: 'roboto',
-    margin: 'auto',
+    textAlign: 'center',
     marginTop: 10,
     marginBottom: 15
   },
@@ -56,10 +60,9 @@ const useStyles = makeStyles({
 
 export default function Balance() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
-  return (
-    <Card className={classes.root} variant="outlined">
+  return (<div className={classes.root} >
+    <Card  className={classes.root} variant="outlined">
       <CardContent>
         <Typography className={classes.title} gutterBottom>
           Your ZotPay Balance
@@ -72,10 +75,11 @@ export default function Balance() {
       </CardContent>
       <CardActions> 
           <div className={classes.twobutton}>
-        <Button className={classes.button} variant="contained" size="small">ADD FUNDS</Button>
-        <Button className={classes.button2} variant="contained" size="small">WITHDRAW</Button>
+        <Button className={classes.button} variant="contained" size="small"><Typography className={classes.text} >ADD FUNDS</Typography></Button>
+        <Button className={classes.button2} variant="contained" size="small"><Typography className={classes.text}>WITHDRAW</Typography></Button>
         </div>
       </CardActions>
     </Card>
+    </div>
   );
 }

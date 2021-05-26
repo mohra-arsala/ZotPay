@@ -25,28 +25,26 @@ export default function QuarterDropDownMenu() {
   };
 
   return (
-    <div>
-      <FormControl variant="outlined" className={classes.formControl}>
-        <InputLabel id="demo-simple-select-outlined-label">Quater</InputLabel>
-        <Select
-          labelId="demo-simple-select-outlined-label"
-          id="demo-simple-select-outlined"
-          value={quarter}
-          onChange={handleChange}
-          label="Quater"
-          className={classes.textsize}
-        >
-          <MenuItem value={10} className={classes.textsize}>
-            Fall 21
-          </MenuItem>
-          <MenuItem value={20} className={classes.textsize}>
-            Winter 22
-          </MenuItem>
-          <MenuItem value={30} className={classes.textsize}>
-            Spring 22
-          </MenuItem>
-        </Select>
-      </FormControl>
-    </div>
+    <FormControl variant="outlined" className={classes.formControl}>
+      <InputLabel id="demo-simple-select-outlined-label">Quarter</InputLabel>
+      <Select
+        labelId="demo-simple-select-outlined-label"
+        id="demo-simple-select-outlined"
+        value={quarter}
+        onChange={handleChange}
+        label="Quarter"
+        className={classes.textsize}
+      >
+        <MenuItem value={10} className={classes.textsize}>
+          Fall '21
+        </MenuItem>
+        <MenuItem value={20} className={classes.textsize}>
+          Winter '22
+        </MenuItem>
+        <MenuItem value={30} className={classes.textsize}>
+          Spring '22
+        </MenuItem>
+      </Select>
+    </FormControl>
   );
 }

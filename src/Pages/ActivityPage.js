@@ -7,7 +7,7 @@ import LongActivity from '../Components/LongActivityCard';
 
 const useStyles = makeStyles((theme) => ({
     date: {
-      fontSize: 20,
+      fontSize: '15',
       color: '#27649f',
       fontWeight: 'bold',
       fontFamily: 'roboto',

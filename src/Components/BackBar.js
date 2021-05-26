@@ -21,10 +21,12 @@ const useStyles = makeStyles({
     color: '#27649f',
     fontWeight: 'bold',
     letterSpacing: '2px',
+    textAlign: 'center'
   },
 });
 
-export default function Bar() {
+export default function BackBar(props) {
+  const {children} = props;
   const classes = useStyles();
 
   return (
@@ -33,7 +35,7 @@ export default function Bar() {
         <Toolbar>
           <ArrowBackIosIcon style={{ color: '#27649f' }} />
           <Typography variant="h6" className={classes.title}>
-            ZotBill
+            {children}
           </Typography>
         </Toolbar>
       </AppBar>
