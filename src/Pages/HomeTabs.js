@@ -32,7 +32,7 @@ const useStyles = makeStyles({
 
 export default function HomeTabs() {
     const classes = useStyles();
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = React.useState(1);
     const handleBottomNavChange = (event, newValue) => {
         setValue(newValue);
     } 

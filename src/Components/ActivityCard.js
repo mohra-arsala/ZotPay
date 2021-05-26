@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     width: '84%',
     margin: 'auto',
     marginTop: 26,
-    minWidth: 376,
+    // minWidth: 376,
   },
   scroll:{
     overflowY: 'scroll'
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
   margin:{
     color: '#27649f',
     marginRight: 0,
-    left: '80%',
+    left: '70%',
     top: -10
   },
   money:{

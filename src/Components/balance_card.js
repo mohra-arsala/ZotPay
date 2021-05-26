@@ -28,8 +28,10 @@ const useStyles = makeStyles({
     color: '#fff'
   },
   box:{
-      width: '40%',
-      margin: 'auto',
+      // width: '40%',
+      // margin: 'auto',
+      display: 'flex',
+      justifyContent: 'center',
   },
   twobutton:{
       margin: 'auto',

@@ -9,15 +9,14 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-
   },
   icon:{
     color: '#27649f',
   },
   bar:{
-    height: 56,
+    height: 60,
     width: '100%',
-    minWidth: 376,
+    // minWidth: 376,
     backgroundColor: '#f9d247',
 
   },
@@ -27,8 +26,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Roboto',
     color: '#27649f',
     fontWeight: 'bold',
-    left: 0, right: 0,
-    position: 'absolute',
+    // left: 0, right: 0,
+    // position: 'absolute',
+    letterSpacing: '2px',
     textAlign: 'center'
   },
 }));

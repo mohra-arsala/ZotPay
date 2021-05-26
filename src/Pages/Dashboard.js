@@ -11,6 +11,8 @@ import HomeIcon from '@material-ui/icons/Home';
 import LocalParkingIcon from '@material-ui/icons/LocalParking';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 
+import Container from '@material-ui/core/Container';
+
 const useStyles = makeStyles({
     menu: {
         color: '#ffffff',
@@ -35,19 +37,21 @@ export default function BottomNav() {
     const [value, setValue] = React.useState(0);
     return ( 
     <div>
-    <Bar></Bar>
-    <Balance></Balance>
-    <Activity></Activity>
-    <div className={classes.bottom}>
-    <ButtonBar></ButtonBar>
-    {/* < BottomNavigation value = { value } className={classes.menu}
-        onChange = {(event, newValue) => {setValue(newValue);}}
-        showLabels>
-        <BottomNavigationAction  className={classes.tab} icon={<LocalParkingIcon/>} label = "Zot Parking"/> 
-        <BottomNavigationAction className={classes.tab} icon={<HomeIcon/>} label = "Home"/> 
-        <BottomNavigationAction className={classes.tab} icon={<AttachMoneyIcon/>} label = "Zot Bill"/>   
-    </BottomNavigation > */}
-    </div>
+        <Bar></Bar>
+        <Container maxWidth='sm'>
+            <Balance></Balance>
+            <Activity></Activity>
+        </Container>
+        <div className={classes.bottom}>
+            <ButtonBar></ButtonBar>
+            {/* < BottomNavigation value = { value } className={classes.menu}
+                onChange = {(event, newValue) => {setValue(newValue);}}
+                showLabels>
+                <BottomNavigationAction  className={classes.tab} icon={<LocalParkingIcon/>} label = "Zot Parking"/> 
+                <BottomNavigationAction className={classes.tab} icon={<HomeIcon/>} label = "Home"/> 
+                <BottomNavigationAction className={classes.tab} icon={<AttachMoneyIcon/>} label = "Zot Bill"/>   
+            </BottomNavigation > */}
+        </div>
     </div>
     );
 }
