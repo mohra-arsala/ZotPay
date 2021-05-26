@@ -23,7 +23,7 @@ export default function BottomNav() {
             <Balance></Balance>
             <Activity></Activity>
         </Container >
-        <ButtonBar></ButtonBar>
+        <ButtonBar ></ButtonBar>
     </div>
     );
 }
