@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import ZotBillTopBar from '../Components/ZotBillTopBar';
+import ZotBillTopBar from '../Components/BackBar';
 import SummaryItem from '../Components/SummaryItem';
 import Button from '@material-ui/core/Button';
 
@@ -17,21 +17,12 @@ const useStyles = makeStyles({
     marginTop: '10%',
   },
   overallDiv: {
-    width: '500px',
+    // width: '500px',
     margin: 'auto',
   },
-  bottomNavigation: {
-    position: 'absolute',
-    bottom: 0,
-  },
-  bottom: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    marginTop: 230,
-  },
-  container: {
-    flex: 1,
-    alignItems: 'center',
+  buttonDiv: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 });
 const ZotBillConfirmation = () => {
@@ -89,6 +80,7 @@ const ZotBillConfirmation = () => {
             fontFamily: 'Roboto',
             letterSpacing: '1px',
             color: '#27649f',
+            textAlign: 'center',
           }}
         >
           Review Your Payments
@@ -116,10 +108,11 @@ const ZotBillConfirmation = () => {
             explanation={summaryItems[3].explanation}
           ></SummaryItem>
         </div>
-
-        <Button variant="outlined" style={{ marginTop: '20px' }}>
-          EDIT
-        </Button>
+        <div className={classes.buttonDiv}>
+          <Button variant="outlined" style={{ marginTop: '20px' }}>
+            EDIT
+          </Button>
+        </div>
 
         <div className={classes.mainButtonsDiv}>
           <Button
@@ -135,12 +128,6 @@ const ZotBillConfirmation = () => {
           >
             PAY
           </Button>
-        </div>
-
-        <div className={classes.bottom}>
-          <BottomNavigation
-            className={classes.bottomNavigation}
-          ></BottomNavigation>
         </div>
 
         <ConfirmDialog
