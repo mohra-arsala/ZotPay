@@ -11,58 +11,83 @@ import ParkingTabs from './ParkingTabs';
 import Dashboard from './Dashboard';
 import ActivityPage from './ActivityPage';
 import ZotBill from './ZotBill';
-import ZotBill2 from './ZotBill2'
+import ZotBill2 from './ZotBill2';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
-    navRoot: {
-        width: '100%',
-        position: 'fixed',
-        bottom: '0',
-        backgroundColor: '#27649f',
-        
+  navRoot: {
+    width: '100%',
+    position: 'fixed',
+    bottom: '0',
+    backgroundColor: '#27649f',
+  },
+  actionRoot: {
+    color: '#fff',
+    opacity: '74%',
+    '&$selected': {
+      color: '#f9d247',
+      opacity: '100%',
     },
-    actionRoot: {
-        color: '#fff',
-        opacity: '74%',
-        '&$selected': {
-            color: '#f9d247',
-            opacity: '100%'
-        }
-    },
-    selected: {}
-})
+  },
+  selected: {},
+});
 
 export default function HomeTabs() {
-    const classes = useStyles();
-    const [value, setValue] = React.useState(1);
-    const handleBottomNavChange = (event, newValue) => {
-        setValue(newValue);
-    } 
+  const classes = useStyles();
+  const [value, setValue] = React.useState(1);
+  const handleBottomNavChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
-    function TabPanel(props) {
+  function TabPanel(props) {
+    // Tab label passed as children; value is index of current tab
+    const { children, value, index } = props;
 
-        // Tab label passed as children; value is index of current tab
-        const {children, value, index} = props;
-
-        return(
-            // Only show tab panel of current tab
-            <div>
-                {value === index && <div>{children}</div>}
-            </div>
-        );
-    }
-
-    return(
-        <div>
-            <TabPanel value={value} index={0}><ParkingTabs></ParkingTabs></TabPanel>
-            <TabPanel value={value} index={1}><Dashboard></Dashboard></TabPanel>
-            <TabPanel value={value} index={2}><ZotBill2></ZotBill2></TabPanel>
-            < BottomNavigation value = {value} onChange = {handleBottomNavChange} 
-                    showLabels className={classes.navRoot}>
-                <BottomNavigationAction icon={<LocalParkingIcon/>} label = "Zot Parking" classes={{root: classes.actionRoot, selected: classes.selected}}/> 
-                <BottomNavigationAction icon={<HomeIcon/>} label = "Home" classes={{root: classes.actionRoot, selected: classes.selected}}/> 
-                <BottomNavigationAction icon={<AttachMoneyIcon/>} label = "Zot Bill" classes={{root: classes.actionRoot, selected: classes.selected}}/>   
-            </BottomNavigation >
-        </div>
+    return (
+      // Only show tab panel of current tab
+      <div>{value === index && <div>{children}</div>}</div>
     );
+  }
+
+  return (
+    <div>
+      <TabPanel value={value} index={0}>
+        <ParkingTabs></ParkingTabs>
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <Dashboard></Dashboard>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <ZotBill2></ZotBill2>
+      </TabPanel>
+      <BottomNavigation
+        value={value}
+        onChange={handleBottomNavChange}
+        showLabels
+        className={classes.navRoot}
+      >
+        <BottomNavigationAction
+          icon={<LocalParkingIcon />}
+          label="Zot Parking"
+          classes={{ root: classes.actionRoot, selected: classes.selected }}
+          component={Link}
+          to="/"
+        />
+        <BottomNavigationAction
+          icon={<HomeIcon />}
+          label="Home"
+          classes={{ root: classes.actionRoot, selected: classes.selected }}
+          component={Link}
+          to="/"
+        />
+        <BottomNavigationAction
+          icon={<AttachMoneyIcon />}
+          label="Zot Bill"
+          classes={{ root: classes.actionRoot, selected: classes.selected }}
+          component={Link}
+          to="/"
+        />
+      </BottomNavigation>
+    </div>
+  );
 }
