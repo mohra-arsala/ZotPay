@@ -8,6 +8,7 @@ import {createMuiTheme, ThemeProvider, responsiveFontSizes} from '@material-ui/c
 import ZotBillConfirmation from '../src/Pages/ZotBillConfirmation';
 import HomeTabs from '../src/Pages/HomeTabs';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import ZotBill2 from './Pages/ZotBill2';
 
 let theme = createMuiTheme({
   palette:{
@@ -24,9 +25,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Switch>
+     <Switch>
           <Route path="/confirmation">
             <ZotBillConfirmation />
+          </Route>
+          <Route path="/zotbill">
+            <ZotBill2></ZotBill2>
           </Route>
         </Switch>
         {/* <ActivityPage></ActivityPage> */}
