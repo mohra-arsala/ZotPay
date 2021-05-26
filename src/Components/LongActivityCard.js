@@ -67,7 +67,7 @@ const useStyles = makeStyles({
       color: '#27649f',
       fontWeight: 'bold',
       fontFamily: 'roboto',
-      width: '30%',
+      width: '8%',
       marginTop: 10,
       marginBottom: 8
   },
@@ -76,7 +76,7 @@ const useStyles = makeStyles({
     color: '#27649f',
     fontWeight: 'bold',
     fontFamily: 'roboto',
-    width: '40%',
+    width: '10%',
     marginTop: 10,
     marginBottom: 8
 },
