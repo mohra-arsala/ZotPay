@@ -7,6 +7,7 @@ import ActivityPage from '..//src/Pages/ActivityPage';
 import {createMuiTheme, ThemeProvider, responsiveFontSizes} from '@material-ui/core/styles';
 import ZotBillConfirmation from '../src/Pages/ZotBillConfirmation';
 import HomeTabs from '../src/Pages/HomeTabs';
+import AirPay from './Pages/AirPay';
 
 let theme = createMuiTheme({
   palette:{
@@ -29,6 +30,7 @@ function App() {
         {/* <ZotBill></ZotBill> */}
         {/* <ParkingTabs></ParkingTabs> */}
         {/* <ZotBillConfirmation></ZotBillConfirmation> */}
+        {/* <AirPay></AirPay> */}
         <HomeTabs></HomeTabs>
       </div>
     </ThemeProvider>
