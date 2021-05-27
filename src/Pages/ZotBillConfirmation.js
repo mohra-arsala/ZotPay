@@ -120,7 +120,7 @@ const ZotBillConfirmation = () => {
             variant="contained"
             style={{ backgroundColor: '#909090', color: '#fff' }}
             component={Link}
-            to="/zotbill"
+            to="/"
           >
             CANCEL
           </Button>
