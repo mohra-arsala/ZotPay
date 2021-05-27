@@ -9,6 +9,8 @@ import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 import SwipeableViews from 'react-swipeable-views';
+import { Link } from 'react-router-dom';
+import { IconButton } from '@material-ui/core';
 
 
 export default class Notification extends Component{
@@ -36,7 +38,11 @@ export default class Notification extends Component{
                 <div className="topNav">
                     {/* <div className="statusBar"></div> */}
                     <div className="pageTitle">
-                        <ArrowBackIosIcon className="backIcon"></ArrowBackIosIcon>
+                    <Link to="/">
+                        <IconButton onClick={() => {}}>
+                        <ArrowBackIosIcon />
+                        </IconButton>
+                    </Link>
                         <NotificationsIcon className="notifIcon"></NotificationsIcon> 
                     </div>
                 </div>

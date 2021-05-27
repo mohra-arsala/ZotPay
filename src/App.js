@@ -7,6 +7,7 @@ import ActivityPage from '..//src/Pages/ActivityPage';
 import {createMuiTheme, ThemeProvider, responsiveFontSizes} from '@material-ui/core/styles';
 import ZotBillConfirmation from '../src/Pages/ZotBillConfirmation';
 import HomeTabs from '../src/Pages/HomeTabs';
+import AirPay from './Pages/AirPay';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import ZotBill2 from './Pages/ZotBill2';
 
@@ -39,6 +40,7 @@ function App() {
         {/* <ZotBill></ZotBill> */}
         {/* <ParkingTabs></ParkingTabs> */}
         {/* <ZotBillConfirmation></ZotBillConfirmation> */}
+        {/* <AirPay></AirPay> */}
         <HomeTabs></HomeTabs>
       </div>
     </ThemeProvider>
