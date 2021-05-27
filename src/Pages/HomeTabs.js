@@ -12,7 +12,10 @@ import Dashboard from './Dashboard';
 import ActivityPage from './ActivityPage';
 import ZotBill from './ZotBill';
 import ZotBill2 from './ZotBill2';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
+
+import { BrowserRouter as Router, Route, Switch, withRouter } from "react-router-dom";
+import Notification from './Notification'
 
 const useStyles = makeStyles({
   navRoot: {
@@ -51,43 +54,43 @@ export default function HomeTabs() {
 
   return (
     <div>
-      <TabPanel value={value} index={0}>
-        <ParkingTabs></ParkingTabs>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Dashboard></Dashboard>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <ZotBill2></ZotBill2>
-      </TabPanel>
-      <BottomNavigation
-        value={value}
-        onChange={handleBottomNavChange}
-        showLabels
-        className={classes.navRoot}
-      >
-        <BottomNavigationAction
-          icon={<LocalParkingIcon />}
-          label="Zot Parking"
-          classes={{ root: classes.actionRoot, selected: classes.selected }}
-          component={Link}
-          to="/"
-        />
-        <BottomNavigationAction
-          icon={<HomeIcon />}
-          label="Home"
-          classes={{ root: classes.actionRoot, selected: classes.selected }}
-          component={Link}
-          to="/"
-        />
-        <BottomNavigationAction
-          icon={<AttachMoneyIcon />}
-          label="Zot Bill"
-          classes={{ root: classes.actionRoot, selected: classes.selected }}
-          component={Link}
-          to="/"
-        />
-      </BottomNavigation>
+        <TabPanel value={value} index={0}>
+          <ParkingTabs></ParkingTabs>
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <Dashboard></Dashboard>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <ZotBill2></ZotBill2>
+        </TabPanel>
+        <BottomNavigation
+          value={value}
+          onChange={handleBottomNavChange}
+          showLabels
+          className={classes.navRoot}
+        >
+          <BottomNavigationAction
+            icon={<LocalParkingIcon />}
+            label="Zot Parking"
+            classes={{ root: classes.actionRoot, selected: classes.selected }}
+            component={Link}
+            to="/"
+          />
+          <BottomNavigationAction
+            icon={<HomeIcon />}
+            label="Home"
+            classes={{ root: classes.actionRoot, selected: classes.selected }}
+            component={Link}
+            to="/"
+          />
+          <BottomNavigationAction
+            icon={<AttachMoneyIcon />}
+            label="Zot Bill"
+            classes={{ root: classes.actionRoot, selected: classes.selected }}
+            component={Link}
+            to="/"
+          />
+        </BottomNavigation>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import './App.css';
-import Notification from '../src/Pages/Notification';
+import Notification from './Pages/Notification';
 import Dashboard from '../src/Pages/Dashboard';
 import ZotBill from '../src/Pages/ZotBill';
 import ParkingTabs from '../src/Pages/ParkingTabs';
@@ -26,7 +26,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-     <Switch>
+     {/* <Switch>
           <Route path="/confirmation">
             <ZotBillConfirmation />
           </Route>
