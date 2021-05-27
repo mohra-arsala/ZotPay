@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import WifiTetheringIcon from '@material-ui/icons/WifiTethering';
 import { Container } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     buttonbar: {
@@ -36,14 +37,20 @@ const useStyles = makeStyles({
 export default function ButtonBar() {
     const classes = useStyles();
 
-    return ( 
-        <Container className={classes.root} onDrag={() => {}}>
-        <Fab className={classes.fab} aria-label="add">
-        <WifiTetheringIcon className={classes.icon}/>
-        </Fab>
-        <Button variant="contained" className={classes.buttonbar}>
-        Swipe to pay for merchants</Button>
-        </Container>
+    return (
+        <Link to="/airpay">
+            {/* <IconButton className={classes.icon} onClick={() => {}}>
+            <NotificationsIcon />
+            </IconButton> */}
+          
+            <Container className={classes.root} onClick={() => {}}>
+            <Fab className={classes.fab} aria-label="add">
+            <WifiTetheringIcon className={classes.icon}/>
+            </Fab>
+            <Button variant="contained" className={classes.buttonbar}>
+            Swipe to pay for merchants</Button>
+            </Container>
+        </Link> 
     );
 }
 
