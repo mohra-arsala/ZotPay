@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Notification from './Pages/Notification';
 import Confirmation from './Pages/ZotBillConfirmation'
 import AirPay from './Pages/AirPay';
+import ZotBill2 from './Pages/ZotBill2';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Route exact path="/notification" component={Notification} />
         <Route exact path="/confirmation" component={Confirmation} />
         <Route exact path="/airpay" component={AirPay} />
+          <Route exact path="/zotbill" component={ZotBill2} />
       </Switch>
       {/* <App /> */}
     </BrowserRouter>
