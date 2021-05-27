@@ -1,5 +1,6 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@material-ui/core";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function PayDialog(props) {
     const [open, setOpen] = React.useState(false);
@@ -28,7 +29,11 @@ export default function PayDialog(props) {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} color="primary">No</Button>
-                    <Button onClick={handleClose} color="primary" autoFocus>Yes</Button>
+                    <Link to="/">
+                        <Button onClick={() => {}} color="primary" autoFocus>Yes</Button>
+                        
+                    </Link>
+                    
                 </DialogActions>
             </Dialog>
         </div>
