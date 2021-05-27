@@ -1,11 +1,13 @@
 import { Component } from 'react';
 import React from 'react';
 import { AppBar, Button, Container, FormControl, Grid, IconButton, InputLabel, makeStyles, MenuItem, Select, Typography } from '@material-ui/core';
-import { ArrowBack } from '@material-ui/icons';
+import { ArrowBack, ArrowBackIos } from '@material-ui/icons';
 import MerchantButton from '../Components/MerchantButton';
 import PaymentOption from '../Components/PaymentDropdown';
 import PayDialog from '../Components/PayDialog';
 import Bar from '../Components/TopBar';
+import { Link } from 'react-router-dom';
+import OnlyBar from '../Components/BarOnly';
 // import classes from '*.module.css';
 
 
@@ -46,7 +48,20 @@ export default class AirPay extends Component{
         // const classes = useStyles();
         
         return(
-            <Container maxWidth="sm">
+            <div>
+                <OnlyBar>
+                    {/* <div className="statusBar"></div> */}
+                    <div className="pageTitle">
+                    <Link to="/">
+                        <IconButton onClick={() => {}}>
+                        <ArrowBackIos />
+                        </IconButton>
+                    </Link>
+                        AirPay 
+                    </div>
+                </OnlyBar>
+            <Container maxWidth="sm" style={{marginTop:'75px'}}>
+                
                 <div onChange={this.handleChange} style={{backgroundImage:'../Resources/lines.jpg'}}>
                     
                     <strong><p style={{textAlign: 'center'}}>Tap Merchant to Confirm & Pay</p></strong>
@@ -68,6 +83,7 @@ export default class AirPay extends Component{
                     </Container>
                 </div>
             </Container>
+            </div>
         );
     }
 }
