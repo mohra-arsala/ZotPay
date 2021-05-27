@@ -37,7 +37,7 @@ export default function MerchantButton(props) {
 
     return (
     <div className={classes.avatarGroup}>
-        <Avatar alt={props.merchantName} src={anteater} className={classes.avatar} onClick={() => {props.onClick(); handleClick()}} style={props.showPayment ? {border: '5px solid green'} : {}}/>
+        <Avatar alt={props.merchantName} src={anteater} className={classes.avatar} onMouseOver={() => {console.log('hover')}} onClick={() => {props.onClick(); handleClick()}} style={props.showPayment ? {border: '5px solid green'} : {}}/>
         <p>{props.merchantName}</p>
     </div>
     )

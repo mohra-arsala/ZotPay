@@ -47,7 +47,7 @@ export default class AirPay extends Component{
         
         return(
             <Container maxWidth="sm">
-                <div onChange={this.handleChange}>
+                <div onChange={this.handleChange} style={{backgroundImage:'../Resources/lines.jpg'}}>
                     
                     <strong><p style={{textAlign: 'center'}}>Tap Merchant to Confirm & Pay</p></strong>
                     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>

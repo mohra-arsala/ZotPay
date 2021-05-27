@@ -14,7 +14,7 @@ export default function PayDialog(props) {
 
     return (
         <div>
-            <Button variant="contained" color="primary" onClick={handleClickOpen}>Pay</Button>
+            <Button variant="contained" color="primary" onClick={handleClickOpen} size="lg">Pay</Button>
             <Dialog
             open={open}
             aria-labelledby="alert-dialog-title"
