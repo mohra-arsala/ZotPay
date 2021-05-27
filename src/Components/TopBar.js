@@ -6,6 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+
+import { Link } from 'react-router-dom';
+
 const useStyles = makeStyles((theme) => ({
   icon:{
     color: '#27649f',
@@ -37,9 +40,11 @@ export default function Bar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.bar}>
         <Toolbar>
-          <IconButton className={classes.icon} onClick={() => {}}>
-          <NotificationsIcon />
-          </IconButton>
+          <Link to="/notification">
+            <IconButton className={classes.icon} onClick={() => {}}>
+            <NotificationsIcon />
+            </IconButton>
+          </Link>
           <Typography variant="h6" className={classes.title}>
             ZotPay
           </Typography>

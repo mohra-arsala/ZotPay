@@ -4,11 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ZotBillConfirmation from './Pages/ZotBillConfirmation';
+import Notification from './Pages/Notification';
+import Confirmation from './Pages/ZotBillConfirmation'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route exact path="/notification" component={Notification} />
+        <Route exact path="/confirmation" component={Confirmation} />
+      </Switch>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
