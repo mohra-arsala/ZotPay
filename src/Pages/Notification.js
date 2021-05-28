@@ -39,7 +39,7 @@ export default class Notification extends Component{
                     {/* <div className="statusBar"></div> */}
                     <div className="pageTitle">
                     <Link to="/">
-                        <IconButton onClick={() => {}}>
+                        <IconButton onClick={() => {}} className="backIcon">
                         <ArrowBackIosIcon />
                         </IconButton>
                     </Link>

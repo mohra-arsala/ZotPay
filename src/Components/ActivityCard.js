@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -14,6 +14,7 @@ import Avatar from '@material-ui/core/Avatar';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import LocalParkingIcon from '@material-ui/icons/LocalParking';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -27,7 +28,7 @@ const useStyles = makeStyles({
 
   margin:{
     color: '#27649f',
-    left: '75%',
+    right: '-320%',
     paddingTop: 0,
     marginTop: 0,
     top: 0,
@@ -83,7 +84,6 @@ const useStyles = makeStyles({
 export default function Activity() {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
-
   return (
     <Card className={classes.root} variant="outlined">
         <div className={classes.c}>
@@ -130,7 +130,7 @@ export default function Activity() {
     </List>
       </CardContent>
       <CardActions> 
-      <Button size="small" className={classes.margin} onClick={() => {}}>VIEW ALL</Button>      
+      <Link to="/activitypage"><Button size="small" className={classes.margin} > VIEW ALL</Button></Link>      
         </CardActions>
       </div>
     </Card>

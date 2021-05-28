@@ -9,12 +9,13 @@ import Confirmation from './Pages/ZotBillConfirmation'
 import AirPay from './Pages/AirPay';
 import ZotBill2 from './Pages/ZotBill2';
 import HomeTabs from './Pages/HomeTabs';
-
+import ActivityPage from './Pages/ActivityPage';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={App} />
+        <Route exact path="/activitypage" component={ActivityPage} />
         <Route exact path="/notification" component={Notification} />
         <Route exact path="/confirmation" component={Confirmation} />
         <Route exact path="/airpay" component={AirPay} />
