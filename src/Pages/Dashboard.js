@@ -15,7 +15,6 @@ import Container from '@material-ui/core/Container';
 
 import SwipeableViews from 'react-swipeable-views';
 import AirPay from './AirPay';
-
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { ArrowBackIos } from '@material-ui/icons';
 

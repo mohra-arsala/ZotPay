@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
     color: '#27649f',
     fontWeight: 'bold',
     letterSpacing: '2px',
-    margin: 'auto'
+    position: 'absolute',
+    marginLeft: '34%'
   },
 }));
 

@@ -55,13 +55,12 @@ body {
 
 .topNav {
   background-color: #F9D247;
-  height: 80px;
+  height: 56px;
 }
 
 .backIcon {
   color: #27649F;
   font-size: large;
-  padding-top: 18px;
   padding-left: 5%;
 }
 
@@ -69,7 +68,7 @@ body {
   color: #27649F;
   font-size: large;
   padding-top: 18px;
-  padding-left: 35%;
+  margin-left: 35%;
 }
 
 .todayNotif {

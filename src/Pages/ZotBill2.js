@@ -139,6 +139,7 @@ const ZotBill2 = () => {
               style={{
                 color: '#fff',
                 backgroundColor: '#0057B2',
+                marginBottom: 40
                 // marginLeft: 170,
               }}
               component={Link}

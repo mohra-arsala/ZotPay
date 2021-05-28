@@ -7,10 +7,13 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import { Link } from 'react-router-dom';
+
 const useStyles = makeStyles((theme) => ({
   icon:{
     color: '#27649f',
     position: 'absolute',
+    top: 5
   },
   bar:{
     height: 56,
@@ -35,9 +38,9 @@ export default function  ActivityBar() {
     <div className={classes.root}>
       <AppBar>
         <Toolbar className={classes.bar} position='static'>
-          <IconButton className={classes.icon} onClick={() => {}}>
+        <Link to="/"><IconButton className={classes.icon} >
           <ArrowBackIosIcon/>
-          </IconButton>
+          </IconButton></Link>
           <Typography variant="h6" className={classes.title}>
             Activity Record
           </Typography>
