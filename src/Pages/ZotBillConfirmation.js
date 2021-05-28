@@ -150,8 +150,7 @@ const ZotBillConfirmation = () => {
           open={confirmationOpen}
           title="Thank you for your purchase"
         >
-          Please check your email for more information on retrieving your
-          physical permit.
+          Please check your email for more information.
         </ConfirmationDialog>
       </div>
     </div>
