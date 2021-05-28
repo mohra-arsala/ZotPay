@@ -41,7 +41,7 @@ function App() {
         {/* <ParkingTabs></ParkingTabs> */}
         {/* <ZotBillConfirmation></ZotBillConfirmation> */}
         {/* <AirPay></AirPay> */}
-        <HomeTabs></HomeTabs>
+        <HomeTabs tabValue={1}></HomeTabs>
       </div>
     </ThemeProvider>
   );

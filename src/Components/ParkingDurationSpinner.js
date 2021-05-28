@@ -13,7 +13,8 @@ const useStyles = makeStyles({
     arrowIcon: {
         paddingLeft: '20px',
         paddingRight: '20px',
-        fontSize: '48px'
+        fontSize: '48px',
+        color: '#27649f',
     },
     arrowLabels: {
         display: 'flex',
@@ -40,8 +41,8 @@ export default function ParkingDurationSpinner() {
             </Typography>
             <div>
                 <div>
-                    <ArrowDropUpIcon color='primary' className={classes.arrowIcon}></ArrowDropUpIcon>
-                    <ArrowDropUpIcon color='primary' className={classes.arrowIcon}></ArrowDropUpIcon>
+                    <ArrowDropUpIcon className={classes.arrowIcon}></ArrowDropUpIcon>
+                    <ArrowDropUpIcon className={classes.arrowIcon}></ArrowDropUpIcon>
                 </div>
                 <Typography className={classes.timeText}>
                     00 : 01

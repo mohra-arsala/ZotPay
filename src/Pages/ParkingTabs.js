@@ -1,4 +1,5 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
 import AppBar from '@material-ui/core/AppBar';
 import ToolBar from '@material-ui/core/Toolbar'
@@ -9,9 +10,15 @@ import ParkingHourly from './ParkingHourly';
 import ParkingPermit from './ParkingPermit';
 
 import OnlyBar from '../Components/BarOnly';
-import { Typography } from '@material-ui/core';
+
+const useStyles = makeStyles({
+    tabs: {
+        backgroundColor: '#27649f',
+    }
+});
 
 export default function ParkingTabs() {
+        const classes = useStyles();
         const [value, setValue] = React.useState(0);
         const handleTab = (e, value) => {
             setValue(value);
@@ -36,7 +43,7 @@ export default function ParkingTabs() {
                     <ToolBar>
                         <OnlyBar>Zot Parking</OnlyBar>
                     </ToolBar>
-                    <Tabs variant="fullWidth" value={value} onChange={handleTab}>
+                    <Tabs variant="fullWidth" value={value} onChange={handleTab} className={classes.tabs}>
                         <Tab label="Pay By Time"/>
                         <Tab label="Pay Permit"/>
                     </Tabs>

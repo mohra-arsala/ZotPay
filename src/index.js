@@ -8,6 +8,7 @@ import Notification from './Pages/Notification';
 import Confirmation from './Pages/ZotBillConfirmation'
 import AirPay from './Pages/AirPay';
 import ZotBill2 from './Pages/ZotBill2';
+import HomeTabs from './Pages/HomeTabs';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,7 +18,16 @@ ReactDOM.render(
         <Route exact path="/notification" component={Notification} />
         <Route exact path="/confirmation" component={Confirmation} />
         <Route exact path="/airpay" component={AirPay} />
-          <Route exact path="/zotbill" component={ZotBill2} />
+        <Route exact path="/zotbill" component={ZotBill2} />
+        <Route exact path="/home/parking" >
+          <HomeTabs tabValue={0}></HomeTabs>
+        </Route>
+        <Route exact path="/home/dashboard" >
+          <HomeTabs tabValue={1}></HomeTabs>
+        </Route>
+        <Route exact path="/home/zotbill" >
+          <HomeTabs tabValue={2}></HomeTabs>
+        </Route>
       </Switch>
       {/* <App /> */}
     </BrowserRouter>

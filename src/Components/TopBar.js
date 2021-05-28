@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   icon:{
     color: '#27649f',
-    position: 'absolute'
+    // position: 'absolute'
   },
   bar:{
     height: 60,

@@ -35,9 +35,10 @@ const useStyles = makeStyles({
   selected: {},
 });
 
-export default function HomeTabs() {
+export default function HomeTabs(props) {
+  const {children, tabValue} = props;
   const classes = useStyles();
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState(tabValue);
   const handleBottomNavChange = (event, newValue) => {
     setValue(newValue);
   };
