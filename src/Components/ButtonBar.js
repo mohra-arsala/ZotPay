@@ -10,8 +10,8 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
     buttonbar: {
         height: 36,
-        width: '110%',
-        marginLeft: '-4%',
+        width: '100vw',
+        // marginLeft: '-4%',
         minWidth: 200,
         backgroundColor: "#f9d44e",
         color: '#27649f',
@@ -24,11 +24,18 @@ const useStyles = makeStyles({
         backgroundColor: "#f9d44e",
         height: 56, width: 56,
         textAlign: 'center',
-        left: '40%',
-        marginBottom: '-4%'
+        // left: '40%',
+        // marginBottom: '-4%',
+        position: 'fixed',
+        bottom: 85,
+        // https://stackoverflow.com/questions/2005954/center-a-positionfixed-element
+        left: '50%',
+        marginLeft: -28
     },
     root:{
         position:'fixed',
+        margin: 0,
+        padding: 0,
         bottom: 56
     }
 });

@@ -49,9 +49,9 @@ export default class AirPay extends Component{
         
         return(
             <div>
-                <OnlyBar>
-                    {/* <div className="statusBar"></div> */}
-                    <div className="pageTitle">
+                {/* <OnlyBar>
+                    <div className="statusBar"></div>
+                    <div>
                     <Link to="/">
                         <IconButton onClick={() => {}}>
                         <ArrowBackIos />
@@ -59,30 +59,30 @@ export default class AirPay extends Component{
                     </Link>
                         AirPay 
                     </div>
-                </OnlyBar>
-            <Container maxWidth="sm" style={{marginTop:'75px'}}>
-                
-                <div onChange={this.handleChange} style={{backgroundImage:'../Resources/lines.jpg'}}>
+                </OnlyBar> */}
+                <Container maxWidth="sm" style={{marginTop:'75px'}}>
                     
-                    <strong><p style={{textAlign: 'center'}}>Tap Merchant to Confirm & Pay</p></strong>
-                    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                        <MerchantButton merchantName="The Hill - 1"></MerchantButton>
-                        <MerchantButton merchantName="The Hill - 2"></MerchantButton>
-                        <MerchantButton merchantName="The Hill - 3" onClick={this.togglePaymentInfo} showPayment={this.state.showPayment}></MerchantButton>
-                    </div>
-                    <Container maxWidth="sm">
-                        <div style={{display:(this.state.showPayment ? 'block':'none'), marginLeft: 'auto',
-        marginRight: 'auto',
-        textAlign: 'center',
-        padding: '5%'}}>
-                            <p>Selected Merchant: <strong>The Hill - 3</strong></p>
-                            <Typography variant="h1">$ 7.53</Typography>
-                            <PaymentOption></PaymentOption>
-                            <PayDialog merchantName="The Hill - 3" total="7.73"></PayDialog>
+                    <div onChange={this.handleChange} style={{backgroundImage:'../Resources/lines.jpg'}}>
+                        
+                        <strong><p style={{textAlign: 'center'}}>Tap Merchant to Confirm & Pay</p></strong>
+                        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                            <MerchantButton merchantName="The Hill - 1"></MerchantButton>
+                            <MerchantButton merchantName="The Hill - 2"></MerchantButton>
+                            <MerchantButton merchantName="The Hill - 3" onClick={this.togglePaymentInfo} showPayment={this.state.showPayment}></MerchantButton>
                         </div>
-                    </Container>
-                </div>
-            </Container>
+                        <Container maxWidth="sm">
+                            <div style={{display:(this.state.showPayment ? 'block':'none'), marginLeft: 'auto',
+                                marginRight: 'auto',
+                                textAlign: 'center',
+                                padding: '5%'}}>
+                                <p>Selected Merchant: <strong>The Hill - 3</strong></p>
+                                <Typography variant="h1">$ 7.53</Typography>
+                                <PaymentOption></PaymentOption>
+                                <PayDialog merchantName="The Hill - 3" total="7.73"></PayDialog>
+                            </div>
+                        </Container>
+                    </div>
+                </Container>
             </div>
         );
     }
