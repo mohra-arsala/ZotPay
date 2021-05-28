@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
   },
   title: {
-    fontSize: 22,
+    fontSize: 20,
     fontFamily: 'Roboto',
     color: '#27649f',
     fontWeight: 'bold',
