@@ -10,6 +10,8 @@ import AirPay from './Pages/AirPay';
 import ZotBill2 from './Pages/ZotBill2';
 import HomeTabs from './Pages/HomeTabs';
 import ActivityPage from './Pages/ActivityPage';
+import ParkingAirPay from './Pages/ParkingAirPay';
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -20,6 +22,7 @@ ReactDOM.render(
         <Route exact path="/confirmation" component={Confirmation} />
         <Route exact path="/airpay" component={AirPay} />
         <Route exact path="/zotbill" component={ZotBill2} />
+        <Route exact path="/parkingairpay" component={ParkingAirPay} />
         <Route exact path="/home/parking" >
           <HomeTabs tabValue={0}></HomeTabs>
         </Route>

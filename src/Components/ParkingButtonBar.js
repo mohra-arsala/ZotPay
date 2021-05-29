@@ -41,7 +41,7 @@ const useStyles = makeStyles({
 });
 
 
-export default function ButtonBar() {
+export default function ParkingButtonBar() {
     const classes = useStyles();
 
     return (
@@ -55,7 +55,7 @@ export default function ButtonBar() {
             <WifiTetheringIcon className={classes.icon}/>
             </Fab>
             <Button variant="contained" className={classes.buttonbar}>
-            Swipe to pay for merchants</Button>
+            Swipe to pay for parking</Button>
         </Container>
         // </Link> 
     );

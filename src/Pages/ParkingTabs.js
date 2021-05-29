@@ -11,6 +11,14 @@ import ParkingPermit from './ParkingPermit';
 
 import OnlyBar from '../Components/BarOnly';
 
+import Bar from '../Components/TopBar';
+import ParkingButtonBar from '../Components/ParkingButtonBar';
+
+import SwipeableViews from 'react-swipeable-views';
+import ParkingAirPay from './ParkingAirPay';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import { ArrowBackIos } from '@material-ui/icons';
+
 const useStyles = makeStyles({
     tabs: {
         backgroundColor: '#27649f',
@@ -37,19 +45,43 @@ export default function ParkingTabs() {
             );
         }
 
+        const [title, setTitle] = React.useState('Zot Parking');
+        //const [barLink, setBarLink] = React.useState('/notification')
+
+        const onChangeIndex = (index, indexLatest, meta) => {
+            if (index == 0) {
+                setTitle('Zot Parking');
+                // setBarLink('/notification');
+                // setIcon(<NotificationsIcon/>);
+            } else if (index == 1) {
+                setTitle('AirPay Parking');
+                // setBarLink('/');
+                // setIcon(<ArrowBackIos/>);
+            }
+        } 
+
         return (
             <div>
-                <AppBar position="static">
-                    <ToolBar>
-                        <OnlyBar>Zot Parking</OnlyBar>
-                    </ToolBar>
-                    <Tabs variant="fullWidth" value={value} onChange={handleTab} className={classes.tabs}>
-                        <Tab label="Pay By Time"/>
-                        <Tab label="Pay Permit"/>
-                    </Tabs>
-                </AppBar>
-                <TabPanel value={value} index={0}><ParkingHourly></ParkingHourly></TabPanel>
-                <TabPanel value={value} index={1}><ParkingPermit></ParkingPermit></TabPanel>
-            </div>  
+                <Bar>{title}</Bar>
+                <SwipeableViews containerStyle={{height: '100vh'}} axis="y" onChangeIndex={onChangeIndex}>
+                    <div style={{height: '100vh'}}>
+                        <AppBar position="static">
+                            <ToolBar>
+                                <OnlyBar>Zot Parking</OnlyBar>
+                            </ToolBar>
+                            <Tabs variant="fullWidth" value={value} onChange={handleTab} className={classes.tabs}>
+                                <Tab label="Pay By Time"/>
+                                <Tab label="Pay Permit"/>
+                            </Tabs>
+                        </AppBar>
+                        <TabPanel value={value} index={0}><ParkingHourly></ParkingHourly></TabPanel>
+                        <TabPanel value={value} index={1}><ParkingPermit></ParkingPermit></TabPanel>
+                        <ParkingButtonBar></ParkingButtonBar>
+                    </div>
+                    <div style={{height: '100vh'}}>
+                        <ParkingAirPay></ParkingAirPay>
+                    </div>
+                </SwipeableViews>
+            </div>
         );
 }
