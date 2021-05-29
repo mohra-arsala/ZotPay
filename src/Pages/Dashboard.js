@@ -13,17 +13,42 @@ import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 
 import Container from '@material-ui/core/Container';
 
+import SwipeableViews from 'react-swipeable-views';
+import AirPay from './AirPay';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import { ArrowBackIos } from '@material-ui/icons';
 
 export default function BottomNav() {
-    const [value, setValue] = React.useState(0);
+    const [title, setTitle] = React.useState('ZotPay');
+    const [barLink, setBarLink] = React.useState('/notification')
+    const [icon, setIcon] = React.useState(<NotificationsIcon/>);
+
+    const onChangeIndex = (index, indexLatest, meta) => {
+        if (index == 0) {
+            setTitle('ZotPay');
+            setBarLink('/notification');
+            setIcon(<NotificationsIcon/>);
+        } else if (index == 1) {
+            setTitle('Airpay');
+            setBarLink('/');
+            setIcon(<ArrowBackIos/>);
+        }
+    } 
     return ( 
-    <div>
-        <Bar></Bar>
-        <Container>
-            <Balance></Balance>
-            <Activity></Activity>
-        </Container >
-        <ButtonBar ></ButtonBar>
-    </div>
+        <div>
+            <Bar linkTo={barLink} icon={icon}>{title}</Bar>
+            <SwipeableViews containerStyle={{height: '100vh'}} axis="y" onChangeIndex={onChangeIndex}>
+                <div style={{height: '100vh', overflow: 'scroll'}}>
+                    <Container>
+                        <Balance></Balance>
+                        <Activity></Activity>
+                    </Container >
+                    <ButtonBar></ButtonBar>
+                </div>
+                <div style={{height: '100vh'}}>
+                    <AirPay></AirPay>
+                </div>
+            </SwipeableViews>
+        </div>
     );
 }

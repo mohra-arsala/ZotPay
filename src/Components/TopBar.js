@@ -5,14 +5,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   icon:{
     color: '#27649f',
-    position: 'absolute'
+    // position: 'absolute'
   },
   bar:{
     height: 60,
@@ -24,29 +23,32 @@ const useStyles = makeStyles((theme) => ({
 
   },
   title: {
-    fontSize: 22,
+    fontSize: 20,
     fontFamily: 'Roboto',
     color: '#27649f',
     fontWeight: 'bold',
     letterSpacing: '2px',
-    margin: 'auto'
+    position: 'absolute',
+    marginLeft: '34%'
   },
 }));
 
-export default function Bar() {
+export default function Bar(props) {
+  const {children, icon, linkTo} = props;
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.bar}>
         <Toolbar>
-          <Link to="/notification">
+          <Link to={linkTo}>
             <IconButton className={classes.icon} onClick={() => {}}>
-            <NotificationsIcon />
+              {/* <NotificationsIcon /> */}
+              {icon}
             </IconButton>
           </Link>
           <Typography variant="h6" className={classes.title}>
-            ZotPay
+            {children}
           </Typography>
         </Toolbar>
       </AppBar>

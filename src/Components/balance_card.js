@@ -11,7 +11,7 @@ import Text from 'react'
 const useStyles = makeStyles({
   root: {
     display: 'strech',
-    marginTop: '25%',
+    marginTop: '80px',
     margin: 'auto',
     width: '97%',
     minWidth: 290

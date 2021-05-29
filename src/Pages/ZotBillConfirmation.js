@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import ConfirmDialog from '../Components/ConfirmDialog';
 import ConfirmationDialog from '../Components/ConfirmationDialog';
 import BottomNavigation from '../Components/BottomNavigation';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
   mainButtonsDiv: {
@@ -28,6 +28,7 @@ const useStyles = makeStyles({
 });
 const ZotBillConfirmation = () => {
   const classes = useStyles();
+  const history = useHistory();
   const summaryItems = [
     {
       title: 'From',
@@ -67,13 +68,14 @@ const ZotBillConfirmation = () => {
 
   const handleConfirmationClose = () => {
     setConfirmationOpen(false);
+    history.push("/");
   };
 
   return (
     <div className={classes.container}>
       <div className={classes.overallDiv}>
         <div>
-          <ZotBillTopBar></ZotBillTopBar>
+          <ZotBillTopBar backTo="/home/zotbill"></ZotBillTopBar>
         </div>
         <h3
           style={{
@@ -120,7 +122,7 @@ const ZotBillConfirmation = () => {
             variant="contained"
             style={{ backgroundColor: '#909090', color: '#fff' }}
             component={Link}
-            to="/zotbill"
+            to="/home/zotbill"
           >
             CANCEL
           </Button>
@@ -148,8 +150,7 @@ const ZotBillConfirmation = () => {
           open={confirmationOpen}
           title="Thank you for your purchase"
         >
-          Please check your email for more information on retrieving your
-          physical permit.
+          Please check your email for more information.
         </ConfirmationDialog>
       </div>
     </div>

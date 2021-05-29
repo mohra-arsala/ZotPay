@@ -16,6 +16,8 @@ import ScanDialog from '../Components/ScanDialog';
 import ConfirmDialog from '../Components/ConfirmDialog';
 import ConfirmationDialog from '../Components/ConfirmationDialog';
 
+import { useHistory } from 'react-router-dom';
+
 const useStyles = makeStyles({
     textFieldContainer: {
         margin: '20px'
@@ -33,12 +35,17 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'flex-end',
         margin: '20px'
+    },
+    payButton: {
+        backgroundColor: '#0057B2',
+        color: '#fff'
     }
 });
 
 export default function ParkingHourly() {
 
     const classes = useStyles();
+    const history = useHistory();
     const [scanOpen, setScanOpen] = React.useState(false);
     const [license, setLicense] = React.useState("");
     const [isDisabled, disable] = React.useState(true);
@@ -74,6 +81,7 @@ export default function ParkingHourly() {
 
     const handleConfirmationClose = () => {
         setConfirmationOpen(false);
+        history.push("/home/dashboard");
     }
 
     return (
@@ -148,7 +156,7 @@ export default function ParkingHourly() {
                 />
             </div>
             <div className={classes.payButtonContainer}>
-                <Button disabled={isDisabled} variant="contained" color="primary" onClick={handleConfirmOpen}>Pay</Button>
+                <Button disabled={isDisabled} variant="contained" className={classes.payButton} onClick={handleConfirmOpen}>Pay</Button>
             </div>
 
             {/* Dialogs */}
