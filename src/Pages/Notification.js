@@ -38,11 +38,9 @@ export default class Notification extends Component{
                 <div className="topNav">
                     {/* <div className="statusBar"></div> */}
                     <div className="pageTitle">
-                    <Link to="/">
-                        <IconButton onClick={() => {}} className="backIcon">
-                        <ArrowBackIosIcon />
-                        </IconButton>
-                    </Link>
+                        <Link to="/">
+                            <ArrowBackIosIcon className="backIcon"></ArrowBackIosIcon>
+                        </Link>
                         <NotificationsIcon className="notifIcon"></NotificationsIcon> 
                     </div>
                 </div>

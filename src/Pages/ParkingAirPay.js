@@ -66,17 +66,17 @@ export default class ParkingAirPay extends Component{
                         
                         <strong><p style={{textAlign: 'center'}}>Tap Parking Area to Confirm & Pay</p></strong>
                         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                            <MerchantButton merchantName="Anteater Parking Structure" onClick={this.togglePaymentInfo} showPayment={this.state.showPayment}></MerchantButton>
+                            <MerchantButton merchantName="UCI LOT 8" onClick={this.togglePaymentInfo} showPayment={this.state.showPayment}></MerchantButton>
                         </div>
                         <Container maxWidth="sm">
                             <div style={{display:(this.state.showPayment ? 'block':'none'), marginLeft: 'auto',
                                 marginRight: 'auto',
                                 textAlign: 'center',
                                 padding: '5%'}}>
-                                <p>Selected Parking Area: <strong>Anteater Parking Structure</strong></p>
+                                <p>Selected Parking Area: <strong>UCI LOT 8</strong></p>
                                 <Typography variant="h1">$ 2.53</Typography>
                                 <PaymentOption></PaymentOption>
-                                <PayDialog merchantName="Anteater Parking Structure" total="2.53"></PayDialog>
+                                <PayDialog merchantName="UCI LOT 8" total="2.53"></PayDialog>
                             </div>
                         </Container>
                     </div>

@@ -21,7 +21,8 @@ const useStyles = makeStyles({
     color: '#27649f',
     fontWeight: 'bold',
     letterSpacing: '1px',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginLeft: '-10%'
   },
 });
 
