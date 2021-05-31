@@ -29,7 +29,7 @@ export default function PayDialog(props) {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} color="primary">No</Button>
-                    <Link to="/">
+                    <Link to="/home/dashboard">
                         <Button onClick={() => {}} color="primary" autoFocus>Yes</Button>
                         
                     </Link>

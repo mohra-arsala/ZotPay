@@ -12,11 +12,10 @@ import ParkingPermit from './ParkingPermit';
 import OnlyBar from '../Components/BarOnly';
 
 import Bar from '../Components/TopBar';
-import ParkingButtonBar from '../Components/ParkingButtonBar';
 
 import SwipeableViews from 'react-swipeable-views';
 import ParkingAirPay from './ParkingAirPay';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+
 import { ArrowBackIos } from '@material-ui/icons';
 
 const useStyles = makeStyles({
@@ -28,7 +27,16 @@ const useStyles = makeStyles({
 export default function ParkingTabs() {
         const classes = useStyles();
         const [value, setValue] = React.useState(0);
+        const [disablePay, setDisablePay] = React.useState(false);
+        const [enableMouse, setEnableMouse] = React.useState(true); 
         const handleTab = (e, value) => {
+            if (value == 0) {
+                setDisablePay(false);
+                setEnableMouse(true);
+            } else if (value == 1) {
+                setDisablePay(true);
+                setEnableMouse(false);
+            }
             setValue(value);
         }
 
@@ -46,24 +54,30 @@ export default function ParkingTabs() {
         }
 
         const [title, setTitle] = React.useState('Zot Parking');
+        const [icon, setIcon] = React.useState(null);
         //const [barLink, setBarLink] = React.useState('/notification')
 
         const onChangeIndex = (index, indexLatest, meta) => {
             if (index == 0) {
                 setTitle('Zot Parking');
                 // setBarLink('/notification');
-                // setIcon(<NotificationsIcon/>);
+                setIcon(null);
             } else if (index == 1) {
                 setTitle('AirPay Parking');
                 // setBarLink('/');
-                // setIcon(<ArrowBackIos/>);
+                setIcon(<ArrowBackIos/>);
             }
         } 
 
         return (
             <div>
-                <Bar>{title}</Bar>
-                <SwipeableViews containerStyle={{height: '100vh'}} axis="y" onChangeIndex={onChangeIndex}>
+                <Bar icon={icon}>{title}</Bar>
+                <SwipeableViews containerStyle={{height: '100vh'}} 
+                    axis="y" 
+                    onChangeIndex={onChangeIndex} 
+                    disabled={disablePay} 
+                    enableMouseEvents={enableMouse}
+                >
                     <div style={{height: '100vh'}}>
                         <AppBar position="static">
                             <ToolBar>
@@ -76,7 +90,6 @@ export default function ParkingTabs() {
                         </AppBar>
                         <TabPanel value={value} index={0}><ParkingHourly></ParkingHourly></TabPanel>
                         <TabPanel value={value} index={1}><ParkingPermit></ParkingPermit></TabPanel>
-                        <ParkingButtonBar></ParkingButtonBar>
                     </div>
                     <div style={{height: '100vh'}}>
                         <ParkingAirPay></ParkingAirPay>

@@ -5,17 +5,11 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import HomeIcon from '@material-ui/icons/Home';
 import LocalParkingIcon from '@material-ui/icons/LocalParking';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
-import ButtonBar from '../Components/ButtonBar';
 
 import ParkingTabs from './ParkingTabs';
 import Dashboard from './Dashboard';
-import ActivityPage from './ActivityPage';
-import ZotBill from './ZotBill';
 import ZotBill2 from './ZotBill2';
-import { BrowserRouter, Link } from 'react-router-dom';
-
-import { BrowserRouter as Router, Route, Switch, withRouter } from "react-router-dom";
-import Notification from './Notification'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   navRoot: {

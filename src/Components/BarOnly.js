@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     fontWeight: 'bold',
     letterSpacing: '1px',
     textAlign: 'center',
-    marginLeft: '-10%'
+    // marginLeft: '-10%'
   },
 });
 
