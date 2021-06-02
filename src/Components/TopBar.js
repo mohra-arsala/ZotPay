@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  linkIconDiv: {
+    position: 'absolute'
+  },
   icon:{
     color: '#27649f',
     // position: 'absolute'
@@ -55,7 +58,7 @@ export default function Bar(props) {
     <div className={classes.root}>
       <AppBar position="static" className={classes.bar}>
         <Toolbar>
-          <div>
+          <div className={classes.linkIconDiv}>
             {icon != null ? <LinkIcon/> : null}
           </div>
           <Typography variant="h6" className={classes.title}>
